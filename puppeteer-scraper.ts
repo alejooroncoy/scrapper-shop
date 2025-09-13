@@ -143,7 +143,10 @@ class FortnitePuppeteerScraper {
 
   private extraerTituloReal($section: cheerio.Cheerio<any>): string | null {
     // Buscar títulos h2 con las clases específicas que mencionaste
-    let titulo = $section.find('h2.font-heading-now-bold').first().text().trim() ||
+    // Priorizar la clase exacta: font-heading-now-bold italic uppercase
+    let titulo = $section.find('h2.font-heading-now-bold.italic.uppercase').first().text().trim() ||
+                 $section.find('h2.font-heading-now-bold').first().text().trim() ||
+                 $section.find('h2[class*="font-heading-now-bold"]').first().text().trim() ||
                  $section.find('h2[class*="font-heading"]').first().text().trim() ||
                  $section.find('h2').first().text().trim() ||
                  $section.find('h1').first().text().trim() ||
@@ -151,11 +154,31 @@ class FortnitePuppeteerScraper {
     
     // Si no encuentra en la sección, buscar en elementos padre
     if (!titulo) {
-      titulo = $section.parent().find('h2.font-heading-now-bold').first().text().trim() ||
+      titulo = $section.parent().find('h2.font-heading-now-bold.italic.uppercase').first().text().trim() ||
+               $section.parent().find('h2.font-heading-now-bold').first().text().trim() ||
+               $section.parent().find('h2[class*="font-heading-now-bold"]').first().text().trim() ||
                $section.parent().find('h2[class*="font-heading"]').first().text().trim() ||
                $section.parent().find('h2').first().text().trim() ||
                $section.parent().find('h1').first().text().trim() ||
                $section.parent().find('h3').first().text().trim();
+    }
+    
+    // Si aún no encuentra, buscar en elementos hermanos
+    if (!titulo) {
+      titulo = $section.siblings().find('h2.font-heading-now-bold.italic.uppercase').first().text().trim() ||
+               $section.siblings().find('h2.font-heading-now-bold').first().text().trim() ||
+               $section.siblings().find('h2[class*="font-heading-now-bold"]').first().text().trim() ||
+               $section.siblings().find('h2[class*="font-heading"]').first().text().trim() ||
+               $section.siblings().find('h2').first().text().trim();
+    }
+    
+    // Si aún no encuentra, buscar en elementos anteriores (prev)
+    if (!titulo) {
+      titulo = $section.prev().find('h2.font-heading-now-bold.italic.uppercase').first().text().trim() ||
+               $section.prev().find('h2.font-heading-now-bold').first().text().trim() ||
+               $section.prev().find('h2[class*="font-heading-now-bold"]').first().text().trim() ||
+               $section.prev().find('h2[class*="font-heading"]').first().text().trim() ||
+               $section.prev().find('h2').first().text().trim();
     }
     
     // Limpiar el título
@@ -195,7 +218,7 @@ class FortnitePuppeteerScraper {
     if (!titulo) {
       const classes = $section.attr('class') || '';
       const classMatch = classes.match(/(?:section|category|grid)-([a-zA-Z0-9-]+)/);
-      if (classMatch) {
+      if (classMatch && classMatch[1]) {
         titulo = this.formatearNombreCategoria(classMatch[1]);
       }
     }
@@ -416,9 +439,10 @@ class FortnitePuppeteerScraper {
           // Buscar el título real en la sección
           let categoriaNombre = this.extraerTituloReal($section);
           
-          // Si no encuentra título real, usar el ID formateado como fallback
+          // Si no encuentra título real, usar el ID como fallback (sin formatear)
           if (!categoriaNombre) {
-            categoriaNombre = this.formatearNombreCategoria(sectionId);
+            categoriaNombre = sectionId;
+            console.log(`⚠️ No se encontró título para la sección ${sectionId}, usando ID como nombre`);
           }
           
           console.log(`🏷️ Categoría encontrada: "${categoriaNombre}" (${sectionId}) - ${productos.length} productos`);
@@ -474,7 +498,7 @@ class FortnitePuppeteerScraper {
     if (!categoriaNombre) {
       // Analizar los productos para determinar la categoría
       const tipos = productos.map(p => p.type).filter(t => t);
-      if (tipos.length > 0) {
+      if (tipos.length > 0 && tipos[0]) {
         categoriaNombre = tipos[0]; // Usar el tipo más común
       }
     }
@@ -510,7 +534,7 @@ class FortnitePuppeteerScraper {
       );
 
       // Solo agregar categorías con productos válidos
-      if (productosUnicos.length > 0 && !nombresCategorias.has(categoria.name)) {
+      if (productosUnicos.length > 0 && categoria.name && !nombresCategorias.has(categoria.name)) {
         nombresCategorias.add(categoria.name);
         categoriasLimpias.push({
           name: categoria.name,
