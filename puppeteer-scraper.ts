@@ -103,6 +103,7 @@ class FortnitePuppeteerScraper {
       console.log('✅ HTML cargado correctamente');
 
       const categoriasMap = new Map<string, Categoria>();
+      const productosGlobales = new Set<string>(); // Para evitar duplicados globales
 
       // Buscar todas las secciones de categorías (mejorado para capturar más categorías)
       $('section[id]').each((_, section) => {
@@ -110,12 +111,17 @@ class FortnitePuppeteerScraper {
         const categoriaNombre = this.extraerNombreCategoria($section);
         
         if (categoriaNombre) {
-          const productos = this.extraerProductos($section, $);
+          const productos = this.extraerProductos($section, $, productosGlobales);
           if (productos.length > 0) {
-            // Si ya existe la categoría, agregar productos a la existente
+            // Si ya existe la categoría, agregar productos únicos a la existente
             if (categoriasMap.has(categoriaNombre)) {
               const categoriaExistente = categoriasMap.get(categoriaNombre)!;
-              categoriaExistente.products.push(...productos);
+              const productosUnicos = productos.filter(p => 
+                !categoriaExistente.products.some(existente => 
+                  existente.name === p.name && existente.url === p.url
+                )
+              );
+              categoriaExistente.products.push(...productosUnicos);
             } else {
               // Crear nueva categoría
               categoriasMap.set(categoriaNombre, {
@@ -127,10 +133,14 @@ class FortnitePuppeteerScraper {
         }
       });
 
-      // Convertir Map a Array
-      const categories = Array.from(categoriasMap.values());
+      // Convertir Map a Array y limpiar categorías vacías
+      let categories = Array.from(categoriasMap.values()).filter(cat => cat.products.length > 0);
+      
+      // Limpiar y optimizar los datos
+      categories = this.limpiarYCategorizar(categories);
 
       console.log(`📦 Se encontraron ${categories.length} categorías`);
+      console.log(`🔍 Total de productos únicos: ${productosGlobales.size}`);
 
       return {
         categories,
@@ -158,7 +168,14 @@ class FortnitePuppeteerScraper {
       }
     }
     
-    return titulo || null;
+    // Validar que el título sea válido
+    if (!titulo || titulo.length < 2) return null;
+    
+    // Filtrar títulos genéricos o inválidos
+    const titulosInvalidos = ['', 'Section', 'Category', 'Categoría', 'N/A', 'TBD', 'Default'];
+    if (titulosInvalidos.includes(titulo)) return null;
+    
+    return titulo;
   }
 
   private formatearNombreCategoria(id: string): string {
@@ -187,7 +204,7 @@ class FortnitePuppeteerScraper {
       .replace(/gorillaz/g, 'Gorillaz');
   }
 
-  private extraerProductos($section: cheerio.Cheerio<any>, $: cheerio.CheerioAPI): Producto[] {
+  private extraerProductos($section: cheerio.Cheerio<any>, $: cheerio.CheerioAPI, productosGlobales: Set<string>): Producto[] {
     const productos: Producto[] = [];
 
     // Buscar todos los elementos de productos
@@ -196,7 +213,16 @@ class FortnitePuppeteerScraper {
       const producto = this.extraerDatosProducto($item, $);
       
       if (producto) {
-        productos.push(producto);
+        // Crear un identificador único para el producto
+        const productoId = `${producto.name}-${producto.url}`;
+        
+        // Solo agregar si no existe globalmente
+        if (!productosGlobales.has(productoId)) {
+          productosGlobales.add(productoId);
+          productos.push(producto);
+        } else {
+          console.log(`⚠️ Producto duplicado encontrado: ${producto.name}`);
+        }
       }
     });
 
@@ -207,7 +233,10 @@ class FortnitePuppeteerScraper {
     try {
       // Extraer nombre
       const nombre = $item.find('[data-testid="item-title"]').text().trim();
-      if (!nombre) return null;
+      if (!nombre || nombre.length < 2) {
+        console.log('⚠️ Producto sin nombre válido, omitiendo...');
+        return null;
+      }
 
       // Extraer tipo/descripción
       const tipo = $item.find('[data-testid="item-type"]').text().trim();
@@ -215,6 +244,12 @@ class FortnitePuppeteerScraper {
       // Extraer precio en VBucks
       const precioElement = $item.find('[data-testid="current-vbuck-price"]');
       const vbucks = this.extraerNumero(precioElement.text().trim());
+      
+      // Validar que el precio sea válido
+      if (vbucks <= 0) {
+        console.log(`⚠️ Producto "${nombre}" sin precio válido (${vbucks}), omitiendo...`);
+        return null;
+      }
 
       // Extraer precio original (si hay descuento)
       const precioOriginalElement = $item.find('[data-testid="original-price"]');
@@ -235,11 +270,17 @@ class FortnitePuppeteerScraper {
       const urlElement = $item.find('a').first();
       const urlRelativa = urlElement.attr('href') || '';
       const url = urlRelativa.startsWith('http') ? urlRelativa : `${this.baseUrl}${urlRelativa}`;
+      
+      // Validar que la URL sea válida
+      if (!url || url === this.baseUrl) {
+        console.log(`⚠️ Producto "${nombre}" sin URL válida, omitiendo...`);
+        return null;
+      }
 
       // Vencimiento (no está disponible en el HTML proporcionado, pero se puede implementar)
       const vencimiento = null; // Se podría extraer de metadatos adicionales
 
-      return {
+      const producto = {
         name: nombre,
         description: tipo,
         type: tipo,
@@ -253,6 +294,14 @@ class FortnitePuppeteerScraper {
         expiration: vencimiento
       };
 
+      // Validación final del producto
+      if (this.validarProducto(producto)) {
+        return producto;
+      } else {
+        console.log(`⚠️ Producto "${nombre}" no pasó la validación final, omitiendo...`);
+        return null;
+      }
+
     } catch (error) {
       console.warn('⚠️ Error extrayendo datos de producto:', error);
       return null;
@@ -262,6 +311,49 @@ class FortnitePuppeteerScraper {
   private extraerNumero(texto: string): number {
     const match = texto.match(/\d+/);
     return match ? parseInt(match[0], 10) : 0;
+  }
+
+  private validarProducto(producto: Producto): boolean {
+    // Validaciones básicas
+    if (!producto.name || producto.name.length < 2) return false;
+    if (producto.vbucks <= 0) return false;
+    if (!producto.url || producto.url.length < 10) return false;
+    
+    // Validar que el precio original sea mayor que el precio actual si existe
+    if (producto.originalPrice && producto.originalPrice <= producto.vbucks) return false;
+    
+    // Validar que el nombre no sea genérico o vacío
+    const nombresInvalidos = ['', 'Producto', 'Item', 'Elemento', 'N/A', 'TBD'];
+    if (nombresInvalidos.includes(producto.name)) return false;
+    
+    // Validar que la URL sea de Fortnite
+    if (!producto.url.includes('fortnite.com')) return false;
+    
+    return true;
+  }
+
+  private limpiarYCategorizar(categorias: Categoria[]): Categoria[] {
+    const categoriasLimpias: Categoria[] = [];
+    const nombresCategorias = new Set<string>();
+
+    categorias.forEach(categoria => {
+      // Limpiar productos duplicados dentro de la categoría
+      const productosUnicos = categoria.products.filter((producto, index, self) => 
+        index === self.findIndex(p => p.name === producto.name && p.url === producto.url)
+      );
+
+      // Solo agregar categorías con productos válidos
+      if (productosUnicos.length > 0 && !nombresCategorias.has(categoria.name)) {
+        nombresCategorias.add(categoria.name);
+        categoriasLimpias.push({
+          name: categoria.name,
+          products: productosUnicos
+        });
+      }
+    });
+
+    // Ordenar categorías por número de productos (descendente)
+    return categoriasLimpias.sort((a, b) => b.products.length - a.products.length);
   }
 
   private extraerImagenes($item: cheerio.Cheerio<any>, $: cheerio.CheerioAPI): ImagenProducto[] {
