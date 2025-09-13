@@ -105,33 +105,21 @@ class FortnitePuppeteerScraper {
       const categoriasMap = new Map<string, Categoria>();
       const productosGlobales = new Set<string>(); // Para evitar duplicados globales
 
-      // Buscar todas las secciones de categorías (mejorado para capturar más categorías)
-      $('section[id]').each((_, section) => {
-        const $section = $(section);
-        const categoriaNombre = this.extraerNombreCategoria($section);
-        
-        if (categoriaNombre) {
-          const productos = this.extraerProductos($section, $, productosGlobales);
-          if (productos.length > 0) {
-            // Si ya existe la categoría, agregar productos únicos a la existente
-            if (categoriasMap.has(categoriaNombre)) {
-              const categoriaExistente = categoriasMap.get(categoriaNombre)!;
-              const productosUnicos = productos.filter(p => 
-                !categoriaExistente.products.some(existente => 
-                  existente.name === p.name && existente.url === p.url
-                )
-              );
-              categoriaExistente.products.push(...productosUnicos);
-            } else {
-              // Crear nueva categoría
-              categoriasMap.set(categoriaNombre, {
-                name: categoriaNombre,
-                products: productos
-              });
-            }
-          }
-        }
-      });
+      // Debug: Analizar estructura del HTML
+      this.analizarEstructuraHTML($);
+      
+      // Método 1: Buscar secciones con productos agrupados
+      this.extraerCategoriasPorSecciones($, categoriasMap, productosGlobales);
+      
+      // Método 2: Si no se encontraron categorías, buscar por grupos de productos
+      if (categoriasMap.size === 0) {
+        this.extraerCategoriasPorGrupos($, categoriasMap, productosGlobales);
+      }
+      
+      // Método 3: Si aún no hay categorías, crear una categoría general
+      if (categoriasMap.size === 0) {
+        this.extraerCategoriaGeneral($, categoriasMap, productosGlobales);
+      }
 
       // Convertir Map a Array y limpiar categorías vacías
       let categories = Array.from(categoriasMap.values()).filter(cat => cat.products.length > 0);
@@ -153,11 +141,46 @@ class FortnitePuppeteerScraper {
     }
   }
 
+  private extraerTituloReal($section: cheerio.Cheerio<any>): string | null {
+    // Buscar títulos h2 con las clases específicas que mencionaste
+    let titulo = $section.find('h2.font-heading-now-bold').first().text().trim() ||
+                 $section.find('h2[class*="font-heading"]').first().text().trim() ||
+                 $section.find('h2').first().text().trim() ||
+                 $section.find('h1').first().text().trim() ||
+                 $section.find('h3').first().text().trim();
+    
+    // Si no encuentra en la sección, buscar en elementos padre
+    if (!titulo) {
+      titulo = $section.parent().find('h2.font-heading-now-bold').first().text().trim() ||
+               $section.parent().find('h2[class*="font-heading"]').first().text().trim() ||
+               $section.parent().find('h2').first().text().trim() ||
+               $section.parent().find('h1').first().text().trim() ||
+               $section.parent().find('h3').first().text().trim();
+    }
+    
+    // Limpiar el título
+    if (titulo) {
+      titulo = titulo.replace(/\s+/g, ' ').trim();
+    }
+    
+    return titulo || null;
+  }
+
   private extraerNombreCategoria($section: cheerio.Cheerio<any>): string | null {
     // Buscar el título de la categoría en diferentes selectores
     let titulo = $section.find('h2').first().text().trim() ||
                  $section.find('h1').first().text().trim() ||
-                 $section.find('[class*="title"]').first().text().trim();
+                 $section.find('h3').first().text().trim() ||
+                 $section.find('[class*="title"]').first().text().trim() ||
+                 $section.find('[class*="heading"]').first().text().trim() ||
+                 $section.find('[class*="header"]').first().text().trim();
+    
+    // Si no encuentra título, buscar en elementos padre
+    if (!titulo) {
+      titulo = $section.parent().find('h2').first().text().trim() ||
+               $section.parent().find('h1').first().text().trim() ||
+               $section.parent().find('h3').first().text().trim();
+    }
     
     // Si no encuentra título, usar el ID de la sección como nombre
     if (!titulo) {
@@ -168,11 +191,20 @@ class FortnitePuppeteerScraper {
       }
     }
     
+    // Si no encuentra título, usar clases CSS como nombre
+    if (!titulo) {
+      const classes = $section.attr('class') || '';
+      const classMatch = classes.match(/(?:section|category|grid)-([a-zA-Z0-9-]+)/);
+      if (classMatch) {
+        titulo = this.formatearNombreCategoria(classMatch[1]);
+      }
+    }
+    
     // Validar que el título sea válido
     if (!titulo || titulo.length < 2) return null;
     
     // Filtrar títulos genéricos o inválidos
-    const titulosInvalidos = ['', 'Section', 'Category', 'Categoría', 'N/A', 'TBD', 'Default'];
+    const titulosInvalidos = ['', 'Section', 'Category', 'Categoría', 'N/A', 'TBD', 'Default', 'Grid', 'Container', 'Wrapper'];
     if (titulosInvalidos.includes(titulo)) return null;
     
     return titulo;
@@ -330,6 +362,141 @@ class FortnitePuppeteerScraper {
     if (!producto.url.includes('fortnite.com')) return false;
     
     return true;
+  }
+
+  private analizarEstructuraHTML($: cheerio.CheerioAPI): void {
+    console.log('🔍 Analizando estructura del HTML...');
+    
+    // Buscar todos los elementos que contienen productos
+    const elementosConProductos = $('[data-testid="grid-catalog-item"]').parent().parent();
+    console.log(`📦 Elementos contenedores de productos encontrados: ${elementosConProductos.length}`);
+    
+    // Analizar la jerarquía de elementos
+    elementosConProductos.each((index, elemento) => {
+      const $elemento = $(elemento);
+      const tagName = elemento.tagName;
+      const id = $elemento.attr('id');
+      const classes = $elemento.attr('class');
+      const productosEnElemento = $elemento.find('[data-testid="grid-catalog-item"]').length;
+      
+      console.log(`  ${index + 1}. <${tagName}> id="${id}" class="${classes}" - ${productosEnElemento} productos`);
+      
+      // Buscar títulos en elementos padre
+      const titulo = $elemento.find('h1, h2, h3, h4').first().text().trim();
+      if (titulo) {
+        console.log(`     Título: "${titulo}"`);
+      }
+    });
+    
+    // Buscar secciones con IDs específicos
+    const seccionesConId = $('section[id], div[id]');
+    console.log(`🏷️ Secciones con ID encontradas: ${seccionesConId.length}`);
+    
+    seccionesConId.each((index, seccion) => {
+      const $seccion = $(seccion);
+      const id = $seccion.attr('id');
+      const productosEnSeccion = $seccion.find('[data-testid="grid-catalog-item"]').length;
+      
+      if (productosEnSeccion > 0) {
+        console.log(`  ${index + 1}. ID: "${id}" - ${productosEnSeccion} productos`);
+      }
+    });
+  }
+
+  private extraerCategoriasPorSecciones($: cheerio.CheerioAPI, categoriasMap: Map<string, Categoria>, productosGlobales: Set<string>): void {
+    // Buscar directamente las secciones con IDs que contienen productos
+    $('section[id], div[id]').each((_, section) => {
+      const $section = $(section);
+      const sectionId = $section.attr('id');
+      
+      if (sectionId && sectionId !== 'item-shop') { // Excluir el contenedor principal
+        const productos = this.extraerProductos($section, $, productosGlobales);
+        
+        if (productos.length > 0) {
+          // Buscar el título real en la sección
+          let categoriaNombre = this.extraerTituloReal($section);
+          
+          // Si no encuentra título real, usar el ID formateado como fallback
+          if (!categoriaNombre) {
+            categoriaNombre = this.formatearNombreCategoria(sectionId);
+          }
+          
+          console.log(`🏷️ Categoría encontrada: "${categoriaNombre}" (${sectionId}) - ${productos.length} productos`);
+          this.agregarProductosACategoria(categoriasMap, categoriaNombre, productos);
+        }
+      }
+    });
+  }
+
+  private extraerCategoriasPorGrupos($: cheerio.CheerioAPI, categoriasMap: Map<string, Categoria>, productosGlobales: Set<string>): void {
+    // Buscar contenedores que puedan agrupar productos por categoría
+    const contenedores = $('div[class*="container"], div[class*="wrapper"], div[class*="content"]');
+    
+    contenedores.each((_, contenedor) => {
+      const $contenedor = $(contenedor);
+      const productos = this.extraerProductos($contenedor, $, productosGlobales);
+      
+      if (productos.length > 0) {
+        // Intentar determinar la categoría basándose en el contexto
+        const categoriaNombre = this.determinarCategoriaPorContexto($contenedor, productos);
+        this.agregarProductosACategoria(categoriasMap, categoriaNombre, productos);
+      }
+    });
+  }
+
+  private extraerCategoriaGeneral($: cheerio.CheerioAPI, categoriasMap: Map<string, Categoria>, productosGlobales: Set<string>): void {
+    // Extraer todos los productos y agruparlos por tipo
+    const todosLosProductos = this.extraerProductos($('body'), $, productosGlobales);
+    
+    if (todosLosProductos.length > 0) {
+      // Agrupar por tipo de producto
+      const productosPorTipo = new Map<string, Producto[]>();
+      
+      todosLosProductos.forEach(producto => {
+        const tipo = producto.type || 'General';
+        if (!productosPorTipo.has(tipo)) {
+          productosPorTipo.set(tipo, []);
+        }
+        productosPorTipo.get(tipo)!.push(producto);
+      });
+      
+      // Crear categorías basadas en tipos
+      productosPorTipo.forEach((productos, tipo) => {
+        this.agregarProductosACategoria(categoriasMap, tipo, productos);
+      });
+    }
+  }
+
+  private determinarCategoriaPorContexto($contenedor: cheerio.Cheerio<any>, productos: Producto[]): string {
+    // Buscar pistas en el contexto para determinar la categoría
+    let categoriaNombre = $contenedor.find('h1, h2, h3').first().text().trim();
+    
+    if (!categoriaNombre) {
+      // Analizar los productos para determinar la categoría
+      const tipos = productos.map(p => p.type).filter(t => t);
+      if (tipos.length > 0) {
+        categoriaNombre = tipos[0]; // Usar el tipo más común
+      }
+    }
+    
+    return categoriaNombre || 'General';
+  }
+
+  private agregarProductosACategoria(categoriasMap: Map<string, Categoria>, categoriaNombre: string, productos: Producto[]): void {
+    if (categoriasMap.has(categoriaNombre)) {
+      const categoriaExistente = categoriasMap.get(categoriaNombre)!;
+      const productosUnicos = productos.filter(p => 
+        !categoriaExistente.products.some(existente => 
+          existente.name === p.name && existente.url === p.url
+        )
+      );
+      categoriaExistente.products.push(...productosUnicos);
+    } else {
+      categoriasMap.set(categoriaNombre, {
+        name: categoriaNombre,
+        products: productos
+      });
+    }
   }
 
   private limpiarYCategorizar(categorias: Categoria[]): Categoria[] {
