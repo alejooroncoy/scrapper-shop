@@ -1,0 +1,46 @@
+{
+  "categorias": [
+    {
+      "nombre": "Kai Cenat",
+      "productos": [
+        {
+          "nombre": "Lote de Kai Cenat",
+          "descripcion": "Lote",
+          "tipo": "Lote",
+          "vbucks": 3500,
+          "precioOriginal": 8200,
+          "descuento": "4700 paVos de descuento",
+          "esNuevo": false,
+          "imagen": "",
+          "url": "https://www.fortnite.com/item-shop/bundles/kai-cenat-bundle-e2f290bb?lang=es-ES",
+          "vencimiento": null
+        },
+        {
+          "nombre": "Kai Cenat",
+          "descripcion": "Lote",
+          "tipo": "Lote",
+          "vbucks": 1800,
+          "precioOriginal": null,
+          "descuento": null,
+          "esNuevo": false,
+          "imagen": "",
+          "url": "https://www.fortnite.com/item-shop/bundles/kai-cenat-dd65401c?lang=es-ES",
+          "vencimiento": null
+        },
+        {
+          "nombre": "Air Jordan 4 Retro OG \"Bred\"",
+          "descripcion": "Calzado",
+          "tipo": "Calzado",
+          "vbucks": 1000,
+          "precioOriginal": null,
+          "descuento": null,
+          "esNuevo": true,
+          "imagen": "",
+          "url": "https://www.fortnite.com/item-shop/kicks/air-jordan-4-retro-og-bred-48905cbe?lang=es-ES",
+          "vencimiento": null
+        }
+      ]
+    }
+  ],
+  "fechaScraping": "2025-09-13T17:57:32.321Z"
+}
