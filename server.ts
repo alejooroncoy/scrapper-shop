@@ -15,7 +15,7 @@ app.use(helmet());
 
 // CORS configurado para permitir requests desde tu frontend
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'https://www.fastpavos.com/', // Cambia por tu URL del frontend
+  origin: process.env.FRONTEND_URL || '*', // Cambia por tu URL del frontend
   credentials: true
 }));
 
