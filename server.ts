@@ -6,6 +6,7 @@ import cron from 'node-cron';
 import fs from 'fs/promises';
 import path from 'path';
 import { FortnitePuppeteerScraper } from './puppeteer-scraper';
+import { CleanJsonGenerator } from './clean-json-generator';
 
 const app = express();
 const PORT = process.env.PORT || 3009;
@@ -50,26 +51,38 @@ app.use(express.json());
 let fortniteData: any = null;
 let lastUpdate: Date | null = null;
 
-// Función para cargar datos desde el archivo JSON
+// Función para cargar datos desde el archivo JSON limpio
 async function cargarDatos(): Promise<void> {
   try {
-    const filePath = path.join(__dirname, 'fortnite_shop_puppeteer.json');
+    const filePath = path.join(__dirname, 'fortnite_shop_clean.json');
     const data = await fs.readFile(filePath, 'utf-8');
     fortniteData = JSON.parse(data);
     lastUpdate = new Date();
-    console.log('✅ Datos cargados desde el archivo JSON');
+    console.log('✅ Datos cargados desde el archivo JSON limpio');
   } catch (error) {
     console.error('❌ Error al cargar datos:', error);
     fortniteData = null;
   }
 }
 
-// Función para ejecutar el scraper
+// Función para ejecutar el scraper completo
 async function ejecutarScraper(): Promise<void> {
   try {
     console.log('🔄 Iniciando actualización automática del scraper...');
-    const scraper = new FortnitePuppeteerScraper();
-    await scraper.scrapeTienda('https://www.fortnite.com/item-shop?lang=es-ES');
+    
+    // Ejecutar el scraper final que genera el JSON limpio
+    const { exec } = await import('child_process');
+    const { promisify } = await import('util');
+    const execAsync = promisify(exec);
+    
+    // Ejecutar el scraper final
+    console.log('📦 Ejecutando scraper final...');
+    await execAsync('bun run final-combined-scraper.ts');
+    
+    // Generar JSON limpio
+    console.log('🧹 Generando JSON limpio...');
+    const generator = new CleanJsonGenerator();
+    await generator.generarJsonLimpio();
     
     // Recargar los datos después del scraping
     await cargarDatos();
@@ -79,7 +92,7 @@ async function ejecutarScraper(): Promise<void> {
   }
 }
 
-// Endpoint principal - obtener todos los datos
+// Endpoint principal - obtener todos los datos (JSON limpio)
 app.get('/api/fortnite-shop', async (req, res) => {
   try {
     if (!fortniteData) {
@@ -97,10 +110,35 @@ app.get('/api/fortnite-shop', async (req, res) => {
       success: true,
       data: fortniteData,
       lastUpdate: lastUpdate?.toISOString(),
-      message: 'Datos obtenidos exitosamente'
+      message: 'Datos obtenidos exitosamente (JSON limpio con precios en VBucks y descuentos del pricing)'
     });
   } catch (error) {
     console.error('Error en endpoint principal:', error);
+    res.status(500).json({
+      error: 'Error interno del servidor',
+      message: 'No se pudieron obtener los datos'
+    });
+  }
+});
+
+// Endpoint para obtener el JSON limpio directamente
+app.get('/api/fortnite-shop/clean', async (req, res) => {
+  try {
+    if (!fortniteData) {
+      await cargarDatos();
+    }
+
+    if (!fortniteData) {
+      return res.status(503).json({
+        error: 'Servicio temporalmente no disponible',
+        message: 'Los datos no están disponibles en este momento'
+      });
+    }
+
+    // Retornar directamente el JSON limpio sin wrapper adicional
+    res.json(fortniteData);
+  } catch (error) {
+    console.error('Error en endpoint clean:', error);
     res.status(500).json({
       error: 'Error interno del servidor',
       message: 'No se pudieron obtener los datos'
@@ -315,16 +353,45 @@ app.get('/api/health', (req, res) => {
 app.get('/api', (req, res) => {
   res.json({
     name: 'Fortnite Shop API',
-    version: '1.0.0',
-    description: 'API para obtener datos de la tienda de Fortnite',
+    version: '2.0.0',
+    description: 'API para obtener datos de la tienda de Fortnite con JSON limpio',
+    features: [
+      'JSON limpio con precios en VBucks',
+      'Descuentos extraídos del pricing',
+      'OfferId para cada producto',
+      'Categorías organizadas',
+      'Búsqueda de productos',
+      'Estadísticas detalladas'
+    ],
     endpoints: {
-      'GET /api/fortnite-shop': 'Obtener todos los datos de la tienda',
+      'GET /api/fortnite-shop': 'Obtener todos los datos de la tienda (con wrapper)',
+      'GET /api/fortnite-shop/clean': 'Obtener JSON limpio directamente',
       'GET /api/fortnite-shop/categories': 'Obtener lista de categorías',
       'GET /api/fortnite-shop/categories/:name': 'Obtener productos de una categoría',
       'GET /api/fortnite-shop/search?q=query': 'Buscar productos',
       'GET /api/fortnite-shop/stats': 'Obtener estadísticas',
       'POST /api/fortnite-shop/update': 'Actualizar datos manualmente',
       'GET /api/health': 'Estado del servidor'
+    },
+    dataStructure: {
+      categories: 'Array de categorías',
+      totalProducts: 'Número total de productos',
+      totalCategories: 'Número total de categorías',
+      scrapingDate: 'Fecha del último scraping',
+      products: {
+        name: 'Nombre del producto',
+        englishTitle: 'Título en inglés',
+        urlName: 'Nombre en URL',
+        offerId: 'ID único de la oferta',
+        assetType: 'Tipo de asset',
+        price: 'Precio en VBucks',
+        originalPrice: 'Precio original (si aplica)',
+        discount: 'Descuento extraído del pricing',
+        isNew: 'Si es producto nuevo',
+        images: 'Array de URLs de imágenes',
+        url: 'URL del producto',
+        type: 'Tipo de producto'
+      }
     },
     rateLimits: {
       general: '100 requests por 15 minutos',
