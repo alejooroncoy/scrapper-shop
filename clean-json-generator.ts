@@ -14,6 +14,9 @@ interface Producto {
   images: string[];
   url: string;
   type: string;
+  color1?: string;
+  color2?: string;
+  color3?: string;
 }
 
 interface Categoria {
@@ -68,7 +71,10 @@ class CleanJsonGenerator {
               isNew: producto.isNew || false,
               images: producto.images ? producto.images.map((img: any) => img.url) : [],
               url: producto.url,
-              type: producto.type
+              type: producto.type,
+              color1: producto.color1 || undefined,
+              color2: producto.color2 || undefined,
+              color3: producto.color3 || undefined
             };
             
             productosLimpios.push(productoLimpio);

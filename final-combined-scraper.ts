@@ -380,7 +380,7 @@ class FinalCombinedScraper {
       }
 
       // Buscar el offerId correspondiente al producto
-      const productoConOfferId = this.buscarOfferIdPorProducto(nombre, productosConOfferId);
+      const productoConOfferId = this.buscarOfferIdPorProducto(nombre, vbucks, productosConOfferId);
 
       return {
         name: nombre,
@@ -397,6 +397,9 @@ class FinalCombinedScraper {
         offerId: productoConOfferId?.offerId || 'No encontrado',
         englishTitle: productoConOfferId?.englishTitle || nombre,
         urlName: productoConOfferId?.urlName || '',
+        color1: productoConOfferId?.color1 || null,
+        color2: productoConOfferId?.color2 || null,
+        color3: productoConOfferId?.color3 || null,
         assetType: productoConOfferId?.assetType || 'unknown'
       };
 
@@ -406,20 +409,24 @@ class FinalCombinedScraper {
     }
   }
 
-  private buscarOfferIdPorProducto(nombre: string, productosConOfferId: any[]): any | null {
-    // Buscar por nombre exacto
-    let producto = productosConOfferId.find(p => 
-      p.title === nombre || p.englishTitle === nombre
-    );
+  private buscarOfferIdPorProducto(nombre: string, vbucks: number, productosConOfferId: any[]): any | null {
+    // Buscar por nombre exacto Y precio (usando pricing.finalPrice)
+    let producto = productosConOfferId.find(p => {
+      const precioRemix = p.pricing?.finalPrice || p.price;
+      return (p.title === nombre || p.englishTitle === nombre) && precioRemix === vbucks;
+    });
     
     if (producto) return producto;
     
-    // Buscar por similitud (ignorar mayúsculas y espacios)
+    // Buscar por similitud (ignorar mayúsculas y espacios) Y precio
     const nombreNormalizado = nombre.toLowerCase().replace(/\s+/g, '');
     producto = productosConOfferId.find(p => {
       const tituloNormalizado = (p.title || '').toLowerCase().replace(/\s+/g, '');
       const tituloInglesNormalizado = (p.englishTitle || '').toLowerCase().replace(/\s+/g, '');
-      return tituloNormalizado === nombreNormalizado || tituloInglesNormalizado === nombreNormalizado;
+      const nombreCoincide = tituloNormalizado === nombreNormalizado || tituloInglesNormalizado === nombreNormalizado;
+      const precioRemix = p.pricing?.finalPrice || p.price;
+      const precioCoincide = precioRemix === vbucks;
+      return nombreCoincide && precioCoincide;
     });
     
     return producto || null;
@@ -507,17 +514,35 @@ class FinalCombinedScraper {
   private limpiarYCategorizar(categorias: Categoria[]): Categoria[] {
     const categoriasLimpias: Categoria[] = [];
     const nombresCategorias = new Set<string>();
+    const offerIdsUsados = new Set<string>();
 
     categorias.forEach(categoria => {
       const productosUnicos = categoria.products.filter((producto, index, self) => 
         index === self.findIndex(p => p.name === producto.name && p.url === producto.url)
       );
 
-      if (productosUnicos.length > 0 && categoria.name && !nombresCategorias.has(categoria.name)) {
+      // Validar unicidad de offerId
+      const productosConOfferIdValido = productosUnicos.map(producto => {
+        if (producto.offerId && producto.offerId !== 'No encontrado') {
+          if (offerIdsUsados.has(producto.offerId)) {
+            console.warn(`⚠️ OfferId duplicado encontrado: ${producto.offerId} para producto: ${producto.name} (${producto.vbucks} VBucks)`);
+            return {
+              ...producto,
+              offerId: 'No encontrado (duplicado)'
+            };
+          } else {
+            offerIdsUsados.add(producto.offerId);
+            return producto;
+          }
+        }
+        return producto;
+      });
+
+      if (productosConOfferIdValido.length > 0 && categoria.name && !nombresCategorias.has(categoria.name)) {
         nombresCategorias.add(categoria.name);
         categoriasLimpias.push({
           name: categoria.name,
-          products: productosUnicos
+          products: productosConOfferIdValido
         });
       }
     });
@@ -525,9 +550,54 @@ class FinalCombinedScraper {
     return categoriasLimpias.sort((a, b) => b.products.length - a.products.length);
   }
 
+  // Método para validar la integridad de los datos
+  private validarIntegridadDatos(datos: TiendaFortniteCompleta): void {
+    console.log('🔍 Validando integridad de los datos...');
+    
+    const offerIds = new Set<string>();
+    const productosDuplicados: string[] = [];
+    let totalProductos = 0;
+    let productosConOfferId = 0;
+    let productosSinOfferId = 0;
+
+    datos.categories.forEach(categoria => {
+      categoria.products.forEach(producto => {
+        totalProductos++;
+        
+        if (producto.offerId && producto.offerId !== 'No encontrado' && producto.offerId !== 'No encontrado (duplicado)') {
+          productosConOfferId++;
+          
+          if (offerIds.has(producto.offerId)) {
+            productosDuplicados.push(`${producto.name} (${producto.vbucks} VBucks) - ${producto.offerId}`);
+          } else {
+            offerIds.add(producto.offerId);
+          }
+        } else {
+          productosSinOfferId++;
+        }
+      });
+    });
+
+    console.log(`📊 Validación completada:`);
+    console.log(`   Total productos: ${totalProductos}`);
+    console.log(`   Productos con offerId válido: ${productosConOfferId}`);
+    console.log(`   Productos sin offerId: ${productosSinOfferId}`);
+    console.log(`   OfferIds únicos: ${offerIds.size}`);
+    
+    if (productosDuplicados.length > 0) {
+      console.warn(`⚠️ Se encontraron ${productosDuplicados.length} productos con offerId duplicado:`);
+      productosDuplicados.forEach(duplicado => console.warn(`   - ${duplicado}`));
+    } else {
+      console.log('✅ No se encontraron offerIds duplicados');
+    }
+  }
+
   // Método para guardar los datos en un archivo JSON
   async guardarDatos(datos: TiendaFortniteCompleta, archivo: string = 'fortnite_shop_final.json'): Promise<void> {
     try {
+      // Validar integridad antes de guardar
+      this.validarIntegridadDatos(datos);
+      
       const jsonString = JSON.stringify(datos, null, 2);
       await Bun.write(archivo, jsonString);
       console.log(`💾 Datos guardados en ${archivo}`);
