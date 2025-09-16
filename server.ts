@@ -83,11 +83,113 @@ async function ejecutarScraper(): Promise<void> {
     const generator = new CleanJsonGenerator();
     await generator.generarJsonLimpio();
     
+    // Extraer colores de los productos
+    console.log('🎨 Extrayendo colores de los productos...');
+    await ejecutarExtraccionColores();
+    
     // Recargar los datos después del scraping
     await cargarDatos();
     console.log('✅ Actualización automática completada');
   } catch (error) {
     console.error('❌ Error en actualización automática:', error);
+  }
+}
+
+// Función para extraer colores de los productos
+async function ejecutarExtraccionColores(): Promise<void> {
+  try {
+    const puppeteer = await import('puppeteer');
+    const fs = await import('fs');
+    
+    const browser = await puppeteer.default.launch({ 
+      headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
+    
+    try {
+      const page = await browser.newPage();
+      await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
+      
+      console.log('🌐 Navegando a la página para extraer colores...');
+      await page.goto('https://www.fortnite.com/item-shop', { 
+        waitUntil: 'domcontentloaded',
+        timeout: 60000 
+      });
+      
+      console.log('⏳ Esperando a que se cargue el contenido...');
+      await new Promise(resolve => setTimeout(resolve, 5000));
+      
+      console.log('🔍 Extrayendo window.__remixContext...');
+      const remixContext = await page.evaluate(() => {
+        return (window as any).__remixContext;
+      });
+      
+      if (!remixContext) {
+        throw new Error('No se encontró window.__remixContext');
+      }
+      
+      console.log('✅ window.__remixContext encontrado');
+      
+      const productosConColores: any[] = [];
+      
+      const buscarProductosRecursivamente = (obj: any, path: string = '') => {
+        if (typeof obj !== 'object' || obj === null) return;
+        
+        if (obj.offerId && obj.title) {
+          productosConColores.push({
+            offerId: obj.offerId,
+            title: obj.title,
+            englishTitle: obj.englishTitle,
+            urlName: obj.urlName,
+            assetType: obj.assetType,
+            color1: obj.color1,
+            color2: obj.color2,
+            color3: obj.color3,
+            pricing: obj.pricing
+          });
+        }
+        
+        if (Array.isArray(obj)) {
+          obj.forEach((item, index) => {
+            buscarProductosRecursivamente(item, `${path}[${index}]`);
+          });
+        } else {
+          Object.keys(obj).forEach(key => {
+            buscarProductosRecursivamente(obj[key], path ? `${path}.${key}` : key);
+          });
+        }
+      };
+      
+      buscarProductosRecursivamente(remixContext);
+      
+      console.log(`📦 Productos con colores encontrados: ${productosConColores.length}`);
+      
+      const jsonExistente = JSON.parse(fs.readFileSync('fortnite_shop_clean.json', 'utf8'));
+      let productosConColoresAgregados = 0;
+      
+      jsonExistente.categories.forEach((categoria: any) => {
+        categoria.products.forEach((producto: any) => {
+          const productoConColores = productosConColores.find(p => p.offerId === producto.offerId);
+          if (productoConColores) {
+            if (productoConColores.color1 || productoConColores.color2 || productoConColores.color3) {
+              producto.color1 = productoConColores.color1 || undefined;
+              producto.color2 = productoConColores.color2 || undefined;
+              producto.color3 = productoConColores.color3 || undefined;
+              productosConColoresAgregados++;
+            }
+          }
+        });
+      });
+      
+      fs.writeFileSync('fortnite_shop_clean.json', JSON.stringify(jsonExistente, null, 2));
+      
+      console.log(`🎨 Colores agregados a ${productosConColoresAgregados} productos`);
+      
+    } finally {
+      await browser.close();
+    }
+  } catch (error) {
+    console.error('❌ Error extrayendo colores:', error);
   }
 }
 
