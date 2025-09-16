@@ -1,5 +1,6 @@
 import puppeteer, { Browser, Page } from 'puppeteer';
 import * as cheerio from 'cheerio';
+import { FORTNITE_COOKIES } from './cookies-config';
 
 // Interfaces para tipado
 interface ImagenProducto {
@@ -41,7 +42,16 @@ interface TiendaFortniteCompleta {
 
 class FinalCombinedScraper {
   private browser: Browser | null = null;
+  
+  // Configuración de cookies - actualizar cuando expiren
+  private cookies = FORTNITE_COOKIES;
   private baseUrl = 'https://www.fortnite.com';
+
+  // Método para actualizar cookies cuando expiren
+  updateCookies(newCookies: any[]) {
+    this.cookies = newCookies;
+    console.log('🍪 Cookies actualizadas');
+  }
 
   async scrapeTiendaCompleta(url: string): Promise<TiendaFortniteCompleta> {
     try {
@@ -123,13 +133,17 @@ class FinalCombinedScraper {
         });
       });
 
-      console.log('🌐 Navegando a la página...');
-      
-      // Navegar a la página
-      await page.goto(url, { 
-        waitUntil: 'domcontentloaded',
-        timeout: 60000 
-      });
+    // Configurar cookies para evitar verificación de seguridad
+    console.log('🍪 Configurando cookies...');
+    await page.setCookie(...this.cookies);
+
+    console.log('🌐 Navegando a la página...');
+    
+    // Navegar a la página
+    await page.goto(url, { 
+      waitUntil: 'domcontentloaded',
+      timeout: 60000 
+    });
 
 
       // Esperar a que se cargue el contenido con delay aleatorio
