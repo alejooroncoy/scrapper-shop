@@ -59,17 +59,69 @@ class FinalCombinedScraper {
           '--no-zygote',
           '--disable-gpu',
           '--disable-web-security',
-          '--disable-features=VizDisplayCompositor'
+          '--disable-features=VizDisplayCompositor',
+          '--disable-blink-features=AutomationControlled',
+          '--disable-extensions',
+          '--disable-plugins',
+          '--disable-default-apps',
+          '--disable-sync',
+          '--disable-translate',
+          '--hide-scrollbars',
+          '--mute-audio',
+          '--no-default-browser-check',
+          '--no-pings',
+          '--disable-background-timer-throttling',
+          '--disable-backgrounding-occluded-windows',
+          '--disable-renderer-backgrounding',
+          '--disable-features=TranslateUI',
+          '--disable-ipc-flooding-protection'
         ]
       });
 
       const page = await this.browser.newPage();
       
       // Configurar user agent y headers
-      await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
+      await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
+      
+      // Configurar headers adicionales para parecer más humano
+      await page.setExtraHTTPHeaders({
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'Accept-Language': 'es-ES,es;q=0.9,en;q=0.8',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'DNT': '1',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1',
+        'Sec-Fetch-Dest': 'document',
+        'Sec-Fetch-Mode': 'navigate',
+        'Sec-Fetch-Site': 'none',
+        'Sec-Fetch-User': '?1',
+        'Cache-Control': 'max-age=0'
+      });
       
       // Configurar viewport
       await page.setViewport({ width: 1920, height: 1080 });
+      
+      // Ocultar detección de automatización
+      await page.evaluateOnNewDocument(() => {
+        Object.defineProperty(navigator, 'webdriver', {
+          get: () => undefined,
+        });
+        
+        // Ocultar chrome runtime
+        (window as any).chrome = {
+          runtime: {},
+        };
+        
+        // Ocultar plugins
+        Object.defineProperty(navigator, 'plugins', {
+          get: () => [1, 2, 3, 4, 5],
+        });
+        
+        // Ocultar languages
+        Object.defineProperty(navigator, 'languages', {
+          get: () => ['es-ES', 'es', 'en'],
+        });
+      });
 
       console.log('🌐 Navegando a la página...');
       
@@ -79,9 +131,17 @@ class FinalCombinedScraper {
         timeout: 60000 
       });
 
-      // Esperar a que se cargue el contenido
+
+      // Esperar a que se cargue el contenido con delay aleatorio
       console.log('⏳ Esperando a que se cargue el contenido...');
-      await new Promise(resolve => setTimeout(resolve, 5000));
+      const randomDelay = Math.floor(Math.random() * 3000) + 3000; // 3-6 segundos
+      await new Promise(resolve => setTimeout(resolve, randomDelay));
+      
+      // Simular comportamiento humano - mover mouse
+      await page.mouse.move(100, 100);
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      await page.mouse.move(200, 200);
+      await new Promise(resolve => setTimeout(resolve, 500));
 
       // Intentar esperar por el selector de productos
       try {

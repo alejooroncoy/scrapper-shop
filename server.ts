@@ -5,7 +5,6 @@ import rateLimit from 'express-rate-limit';
 import cron from 'node-cron';
 import fs from 'fs/promises';
 import path from 'path';
-import { FortnitePuppeteerScraper } from './puppeteer-scraper';
 import { CleanJsonGenerator } from './clean-json-generator';
 
 const app = express();
