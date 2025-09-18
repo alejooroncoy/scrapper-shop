@@ -1,0 +1,15 @@
+# Copia este contenido a un archivo .env en la raíz del proyecto
+
+# Configuración de Proxy
+PROXY_URL=http://proxy-server:port
+PROXY_USERNAME=tu_usuario
+PROXY_PASSWORD=tu_password
+
+# Ejemplos reales:
+# PROXY_URL=http://123.456.789.012:8080
+# PROXY_URL=http://username:password@proxy-server:8080
+# PROXY_URL=socks5://proxy-server:1080
+
+# Configuración del servidor
+PORT=3009
+FRONTEND_URL=*

@@ -57,6 +57,13 @@ class FinalCombinedScraper {
     try {
       console.log('🔍 Iniciando scraping completo (HTML + Remix Context)...');
       
+      // Configuración de proxy (opcional)
+      const proxyConfig = process.env.PROXY_URL ? {
+        server: process.env.PROXY_URL, // ej: 'http://proxy-server:port'
+        username: process.env.PROXY_USERNAME,
+        password: process.env.PROXY_PASSWORD
+      } : undefined;
+
       // Inicializar Puppeteer
       this.browser = await puppeteer.launch({
         headless: true,
@@ -84,11 +91,24 @@ class FinalCombinedScraper {
           '--disable-backgrounding-occluded-windows',
           '--disable-renderer-backgrounding',
           '--disable-features=TranslateUI',
-          '--disable-ipc-flooding-protection'
+          '--disable-ipc-flooding-protection',
+          // Proxy args
+          ...(proxyConfig ? [`--proxy-server=${proxyConfig.server}`] : [])
         ]
       });
 
       const page = await this.browser.newPage();
+      
+      // Configurar proxy con autenticación si está disponible
+      if (proxyConfig && proxyConfig.username && proxyConfig.password) {
+        await page.authenticate({
+          username: proxyConfig.username,
+          password: proxyConfig.password
+        });
+        console.log('🔐 Proxy configurado con autenticación');
+      } else if (proxyConfig) {
+        console.log('🌐 Proxy configurado sin autenticación');
+      }
       
       // Configurar user agent y headers
       await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
