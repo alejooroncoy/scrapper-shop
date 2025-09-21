@@ -1,6 +1,7 @@
 import puppeteer, { Browser, Page } from 'puppeteer';
 import * as cheerio from 'cheerio';
 import { FORTNITE_COOKIES } from './cookies-config';
+import { getRandomProxy, getProxyByIndex, type ProxyConfig } from './proxy-config';
 
 // Interfaces para tipado
 interface ImagenProducto {
@@ -46,6 +47,10 @@ class FinalCombinedScraper {
   // Configuración de cookies - actualizar cuando expiren
   private cookies = FORTNITE_COOKIES;
   private baseUrl = 'https://www.fortnite.com';
+  
+  // Configuración de proxy
+  private proxyConfig: ProxyConfig | null = null;
+  private useProxy: boolean = false;
 
   // Método para actualizar cookies cuando expiren
   updateCookies(newCookies: any[]) {
@@ -53,16 +58,34 @@ class FinalCombinedScraper {
     console.log('🍪 Cookies actualizadas');
   }
 
+  // Método para configurar proxy
+  setProxy(proxyIndex?: number, useRandom: boolean = false) {
+    if (useRandom) {
+      this.proxyConfig = getRandomProxy();
+      console.log('🎲 Proxy aleatorio configurado');
+    } else if (proxyIndex !== undefined) {
+      this.proxyConfig = getProxyByIndex(proxyIndex);
+      console.log(`🔐 Proxy ${proxyIndex + 1} configurado`);
+    } else {
+      this.proxyConfig = null;
+      console.log('🌐 Sin proxy configurado');
+    }
+    this.useProxy = this.proxyConfig !== null;
+  }
+
+  // Método para desactivar proxy
+  disableProxy() {
+    this.proxyConfig = null;
+    this.useProxy = false;
+    console.log('🚫 Proxy desactivado');
+  }
+
   async scrapeTiendaCompleta(url: string): Promise<TiendaFortniteCompleta> {
     try {
       console.log('🔍 Iniciando scraping completo (HTML + Remix Context)...');
       
-      // Configuración de proxy (opcional)
-      const proxyConfig = process.env.PROXY_URL ? {
-        server: process.env.PROXY_URL, // ej: 'http://proxy-server:port'
-        username: process.env.PROXY_USERNAME,
-        password: process.env.PROXY_PASSWORD
-      } : undefined;
+      // Usar configuración de proxy si está disponible
+      const proxyConfig = this.proxyConfig;
 
       // Inicializar Puppeteer
       this.browser = await puppeteer.launch({
@@ -105,9 +128,12 @@ class FinalCombinedScraper {
           username: proxyConfig.username,
           password: proxyConfig.password
         });
-        console.log('🔐 Proxy configurado con autenticación');
+        console.log(`🔐 Proxy configurado: ${proxyConfig.server}`);
+        console.log(`👤 Usuario: ${proxyConfig.username}`);
       } else if (proxyConfig) {
-        console.log('🌐 Proxy configurado sin autenticación');
+        console.log(`🌐 Proxy configurado sin autenticación: ${proxyConfig.server}`);
+      } else {
+        console.log('🌐 Sin proxy configurado');
       }
       
       // Configurar user agent y headers
@@ -491,9 +517,6 @@ class FinalCombinedScraper {
         offerId: productoConOfferId?.offerId || 'No encontrado',
         englishTitle: productoConOfferId?.englishTitle || nombre,
         urlName: productoConOfferId?.urlName || '',
-        color1: productoConOfferId?.color1 || null,
-        color2: productoConOfferId?.color2 || null,
-        color3: productoConOfferId?.color3 || null,
         assetType: productoConOfferId?.assetType || 'unknown'
       };
 
@@ -758,6 +781,29 @@ async function main() {
 
   try {
     console.log('🚀 Iniciando web scraper final de Fortnite...\n');
+    
+    // Configurar proxy basado en argumentos de línea de comandos
+    const args = process.argv.slice(2);
+    
+    if (args.includes('--proxy-random') || args.includes('-pr')) {
+      scraper.setProxy(undefined, true);
+    } else if (args.includes('--proxy') || args.includes('-p')) {
+      const proxyArg = args.find(arg => arg.startsWith('--proxy=') || arg.startsWith('-p='));
+      if (proxyArg) {
+        const proxyIndex = parseInt(proxyArg.split('=')[1] || '0') - 1; // Convertir a índice base 0
+        if (proxyIndex >= 0 && proxyIndex < 10) {
+          scraper.setProxy(proxyIndex);
+        } else {
+          console.log('❌ Índice de proxy inválido. Usa un número entre 1 y 10');
+          process.exit(1);
+        }
+      } else {
+        console.log('❌ Debes especificar un índice de proxy. Ejemplo: --proxy=1 o -p=1');
+        process.exit(1);
+      }
+    } else if (args.includes('--no-proxy')) {
+      scraper.disableProxy();
+    }
     
     const datos = await scraper.scrapeTiendaCompleta(url);
     
