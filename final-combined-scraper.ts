@@ -3,11 +3,85 @@ import * as cheerio from 'cheerio';
 import { FORTNITE_COOKIES } from './cookies-config';
 import { getRandomProxy, getProxyByIndex, type ProxyConfig } from './proxy-config';
 
-// Interfaces para tipado
+// Configuración de logging mejorada
+interface LogLevel {
+  ERROR: 'error';
+  WARN: 'warn';
+  INFO: 'info';
+  DEBUG: 'debug';
+}
+
+const LOG_LEVELS: LogLevel = {
+  ERROR: 'error',
+  WARN: 'warn',
+  INFO: 'info',
+  DEBUG: 'debug'
+};
+
+class Logger {
+  private static instance: Logger;
+  private logLevel: string = 'info';
+
+  static getInstance(): Logger {
+    if (!Logger.instance) {
+      Logger.instance = new Logger();
+    }
+    return Logger.instance;
+  }
+
+  setLogLevel(level: string) {
+    this.logLevel = level;
+  }
+
+  private shouldLog(level: string): boolean {
+    const levels = ['error', 'warn', 'info', 'debug'];
+    const currentIndex = levels.indexOf(this.logLevel);
+    const messageIndex = levels.indexOf(level);
+    return messageIndex <= currentIndex;
+  }
+
+  error(message: string, ...args: any[]) {
+    if (this.shouldLog('error')) {
+      console.error(`❌ [ERROR] ${message}`, ...args);
+    }
+  }
+
+  warn(message: string, ...args: any[]) {
+    if (this.shouldLog('warn')) {
+      console.warn(`⚠️ [WARN] ${message}`, ...args);
+    }
+  }
+
+  info(message: string, ...args: any[]) {
+    if (this.shouldLog('info')) {
+      console.log(`ℹ️ [INFO] ${message}`, ...args);
+    }
+  }
+
+  debug(message: string, ...args: any[]) {
+    if (this.shouldLog('debug')) {
+      console.log(`🔍 [DEBUG] ${message}`, ...args);
+    }
+  }
+
+  success(message: string, ...args: any[]) {
+    console.log(`✅ [SUCCESS] ${message}`, ...args);
+  }
+
+  progress(message: string, ...args: any[]) {
+    console.log(`🔄 [PROGRESS] ${message}`, ...args);
+  }
+}
+
+const logger = Logger.getInstance();
+
+// Interfaces para tipado mejoradas
 interface ImagenProducto {
   url: string;
   resolution: string;
   width: number;
+  height?: number;
+  alt?: string;
 }
 
 interface ProductoCompleto {
@@ -22,53 +96,103 @@ interface ProductoCompleto {
   images: ImagenProducto[];
   url: string;
   expiration: string | null;
-  offerId: string; // OfferId del producto
+  offerId: string;
   englishTitle: string;
   urlName: string;
   assetType: string;
+  rarity?: string;
+  tags?: string[];
+  lastUpdated?: string;
 }
 
 interface Categoria {
   name: string;
   products: ProductoCompleto[];
+  totalProducts: number;
+  lastUpdated?: string;
 }
 
 interface TiendaFortniteCompleta {
   categories: Categoria[];
-  offerId: string; // OfferId general del catalog
+  offerId: string;
   scrapingDate: string;
   totalProducts: number;
   totalOfferIds: number;
+  scrapingDuration?: number;
+  proxyUsed?: string;
+  version: string;
+}
+
+// Configuración de scraping
+interface ScrapingConfig {
+  timeout: number;
+  retryAttempts: number;
+  delayBetweenRequests: number;
+  useProxy: boolean;
+  proxyIndex?: number;
+  useRandomProxy?: boolean;
+  headless: boolean;
+  logLevel: string;
+}
+
+// Resultado de scraping con metadatos
+interface ScrapingResult {
+  success: boolean;
+  data?: TiendaFortniteCompleta;
+  error?: string;
+  duration: number;
+  attempts: number;
+  proxyUsed?: string;
 }
 
 class FinalCombinedScraper {
   private browser: Browser | null = null;
-  
-  // Configuración de cookies - actualizar cuando expiren
   private cookies = FORTNITE_COOKIES;
   private baseUrl = 'https://www.fortnite.com';
-  
-  // Configuración de proxy
   private proxyConfig: ProxyConfig | null = null;
   private useProxy: boolean = false;
+  private config: ScrapingConfig;
+  private startTime: number = 0;
+  private retryCount: number = 0;
+  
+  constructor(config?: Partial<ScrapingConfig>) {
+    this.config = {
+      timeout: 60000,
+      retryAttempts: 3,
+      delayBetweenRequests: 2000,
+      useProxy: false,
+      headless: true,
+      logLevel: 'info',
+      ...config
+    };
+    
+    logger.setLogLevel(this.config.logLevel);
+  }
 
   // Método para actualizar cookies cuando expiren
   updateCookies(newCookies: any[]) {
     this.cookies = newCookies;
-    console.log('🍪 Cookies actualizadas');
+    logger.success('Cookies actualizadas');
+  }
+
+  // Método para actualizar configuración
+  updateConfig(newConfig: Partial<ScrapingConfig>) {
+    this.config = { ...this.config, ...newConfig };
+    logger.setLogLevel(this.config.logLevel);
+    logger.info('Configuración actualizada', newConfig);
   }
 
   // Método para configurar proxy
   setProxy(proxyIndex?: number, useRandom: boolean = false) {
     if (useRandom) {
       this.proxyConfig = getRandomProxy();
-      console.log('🎲 Proxy aleatorio configurado');
+      logger.info('Proxy aleatorio configurado', { server: this.proxyConfig.server });
     } else if (proxyIndex !== undefined) {
       this.proxyConfig = getProxyByIndex(proxyIndex);
-      console.log(`🔐 Proxy ${proxyIndex + 1} configurado`);
+      logger.info(`Proxy ${proxyIndex + 1} configurado`, { server: this.proxyConfig.server });
     } else {
       this.proxyConfig = null;
-      console.log('🌐 Sin proxy configurado');
+      logger.info('Sin proxy configurado');
     }
     this.useProxy = this.proxyConfig !== null;
   }
@@ -77,19 +201,92 @@ class FinalCombinedScraper {
   disableProxy() {
     this.proxyConfig = null;
     this.useProxy = false;
-    console.log('🚫 Proxy desactivado');
+    logger.info('Proxy desactivado');
   }
 
-  async scrapeTiendaCompleta(url: string): Promise<TiendaFortniteCompleta> {
-    try {
-      console.log('🔍 Iniciando scraping completo (HTML + Remix Context)...');
-      
-      // Usar configuración de proxy si está disponible
-      const proxyConfig = this.proxyConfig;
+  // Método para obtener información del proxy actual
+  getProxyInfo(): string | null {
+    return this.proxyConfig ? `${this.proxyConfig.server} (${this.proxyConfig.username})` : null;
+  }
 
-      // Inicializar Puppeteer
+  async scrapeTiendaCompleta(url: string): Promise<ScrapingResult> {
+    this.startTime = Date.now();
+    this.retryCount = 0;
+    
+    try {
+      logger.info('Iniciando scraping completo (HTML + Remix Context)...');
+      logger.debug('Configuración actual', {
+        proxy: this.getProxyInfo(),
+        timeout: this.config.timeout,
+        retryAttempts: this.config.retryAttempts
+      });
+      
+      const result = await this.ejecutarScrapingConReintentos(url);
+      
+      const duration = Date.now() - this.startTime;
+      logger.success(`Scraping completado en ${duration}ms`);
+      
+      return {
+        success: true,
+        data: result,
+        duration,
+        attempts: this.retryCount + 1,
+        proxyUsed: this.getProxyInfo() || undefined
+      };
+      
+    } catch (error) {
+      const duration = Date.now() - this.startTime;
+      const errorMessage = error instanceof Error ? error.message : 'Error desconocido';
+      
+      logger.error('Error durante el scraping', errorMessage);
+      
+      return {
+        success: false,
+        error: errorMessage,
+        duration,
+        attempts: this.retryCount + 1,
+        proxyUsed: this.getProxyInfo() || undefined
+      };
+    }
+  }
+
+  private async ejecutarScrapingConReintentos(url: string): Promise<TiendaFortniteCompleta> {
+    let lastError: Error | null = null;
+    
+    for (let attempt = 0; attempt <= this.config.retryAttempts; attempt++) {
+      this.retryCount = attempt;
+      
+      try {
+        if (attempt > 0) {
+          logger.warn(`Reintento ${attempt}/${this.config.retryAttempts}`);
+          await this.delay(this.config.delayBetweenRequests);
+        }
+        
+        return await this.ejecutarScraping(url);
+        
+      } catch (error) {
+        lastError = error instanceof Error ? error : new Error('Error desconocido');
+        logger.warn(`Intento ${attempt + 1} falló`, lastError.message);
+        
+        if (attempt === this.config.retryAttempts) {
+          throw lastError;
+        }
+        
+        // Limpiar recursos antes del siguiente intento
+        await this.limpiarRecursos();
+      }
+    }
+    
+    throw lastError || new Error('Error en todos los intentos');
+  }
+
+  private async ejecutarScraping(url: string): Promise<TiendaFortniteCompleta> {
+    // Usar configuración de proxy si está disponible
+    const proxyConfig = this.proxyConfig;
+
+      // Inicializar Puppeteer con configuración mejorada
       this.browser = await puppeteer.launch({
-        headless: true,
+        headless: this.config.headless,
         args: [
           '--no-sandbox',
           '--disable-setuid-sandbox',
@@ -115,12 +312,28 @@ class FinalCombinedScraper {
           '--disable-renderer-backgrounding',
           '--disable-features=TranslateUI',
           '--disable-ipc-flooding-protection',
+          '--disable-background-networking',
+          '--disable-default-apps',
+          '--disable-sync',
+          '--metrics-recording-only',
+          '--no-first-run',
+          '--safebrowsing-disable-auto-update',
+          '--enable-automation',
+          '--password-store=basic',
+          '--use-mock-keychain',
           // Proxy args
           ...(proxyConfig ? [`--proxy-server=${proxyConfig.server}`] : [])
-        ]
+        ],
+        timeout: this.config.timeout
       });
+      
+      logger.debug('Navegador iniciado correctamente');
 
       const page = await this.browser.newPage();
+      
+      // Configurar timeouts de página
+      page.setDefaultTimeout(this.config.timeout);
+      page.setDefaultNavigationTimeout(this.config.timeout);
       
       // Configurar proxy con autenticación si está disponible
       if (proxyConfig && proxyConfig.username && proxyConfig.password) {
@@ -128,16 +341,18 @@ class FinalCombinedScraper {
           username: proxyConfig.username,
           password: proxyConfig.password
         });
-        console.log(`🔐 Proxy configurado: ${proxyConfig.server}`);
-        console.log(`👤 Usuario: ${proxyConfig.username}`);
+        logger.info('Proxy configurado con autenticación', {
+          server: proxyConfig.server,
+          username: proxyConfig.username
+        });
       } else if (proxyConfig) {
-        console.log(`🌐 Proxy configurado sin autenticación: ${proxyConfig.server}`);
+        logger.info('Proxy configurado sin autenticación', { server: proxyConfig.server });
       } else {
-        console.log('🌐 Sin proxy configurado');
+        logger.info('Sin proxy configurado');
       }
       
-      // Configurar user agent y headers
-      await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
+      // Configurar user agent y headers mejorados
+      await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36');
       
       // Configurar headers adicionales para parecer más humano
       await page.setExtraHTTPHeaders({
@@ -151,11 +366,14 @@ class FinalCombinedScraper {
         'Sec-Fetch-Mode': 'navigate',
         'Sec-Fetch-Site': 'none',
         'Sec-Fetch-User': '?1',
-        'Cache-Control': 'max-age=0'
+        'Cache-Control': 'max-age=0',
+        'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"Windows"'
       });
       
       // Configurar viewport
-      await page.setViewport({ width: 1920, height: 1080 });
+      await page.setViewport({ width: 1920, height: 1080, deviceScaleFactor: 1 });
       
       // Ocultar detección de automatización
       await page.evaluateOnNewDocument(() => {
@@ -164,7 +382,7 @@ class FinalCombinedScraper {
         });
         
         // Ocultar chrome runtime
-        (window as any).chrome = {
+        (globalThis as any).chrome = {
           runtime: {},
         };
         
@@ -179,83 +397,121 @@ class FinalCombinedScraper {
         });
       });
 
-    // Configurar cookies para evitar verificación de seguridad
-    console.log('🍪 Configurando cookies...');
-    await page.setCookie(...this.cookies);
+      // Configurar cookies para evitar verificación de seguridad
+      logger.info('Configurando cookies...');
+      await page.setCookie(...this.cookies);
 
-    console.log('🌐 Navegando a la página...');
-    
-    // Navegar a la página
-    await page.goto(url, { 
-      waitUntil: 'domcontentloaded',
-      timeout: 60000 
-    });
+      logger.info('Navegando a la página...');
+      
+      // Navegar a la página con mejor manejo de errores
+      await page.goto(url, { 
+        waitUntil: 'domcontentloaded',
+        timeout: this.config.timeout 
+      });
+      
+      logger.debug('Página cargada correctamente');
 
 
       // Esperar a que se cargue el contenido con delay aleatorio
-      console.log('⏳ Esperando a que se cargue el contenido...');
+      logger.info('Esperando a que se cargue el contenido...');
       const randomDelay = Math.floor(Math.random() * 3000) + 3000; // 3-6 segundos
-      await new Promise(resolve => setTimeout(resolve, randomDelay));
+      await this.delay(randomDelay);
       
       // Simular comportamiento humano - mover mouse
-      await page.mouse.move(100, 100);
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      await page.mouse.move(200, 200);
-      await new Promise(resolve => setTimeout(resolve, 500));
+      await this.simularComportamientoHumano(page);
 
       // Intentar esperar por el selector de productos
       try {
         await page.waitForSelector('[data-testid="grid-catalog-item"]', { timeout: 15000 });
-        console.log('✅ Selector de productos encontrado');
+        logger.success('Selector de productos encontrado');
       } catch (error) {
-        console.log('⚠️ Selector de productos no encontrado, continuando...');
+        logger.warn('Selector de productos no encontrado, continuando...');
       }
 
       // Extraer window.__remixContext para obtener offerIds
-      console.log('🔍 Extrayendo window.__remixContext...');
+      logger.info('Extrayendo window.__remixContext...');
       const remixContext = await page.evaluate(() => {
-        return (window as any).__remixContext;
+        return (globalThis as any).__remixContext;
       });
 
       let offerIdGeneral = 'No encontrado';
       let productosConOfferId: any[] = [];
       
       if (remixContext) {
-        console.log('✅ window.__remixContext encontrado');
+        logger.success('window.__remixContext encontrado');
         offerIdGeneral = this.extraerOfferIdGeneral(remixContext) || 'No encontrado';
         productosConOfferId = this.extraerProductosConOfferId(remixContext);
-        console.log(`🆔 OfferId general: ${offerIdGeneral}`);
-        console.log(`📦 Productos con offerId encontrados: ${productosConOfferId.length}`);
+        logger.info('Datos extraídos del contexto', {
+          offerIdGeneral,
+          productosConOfferId: productosConOfferId.length
+        });
       } else {
-        console.log('⚠️ No se encontró window.__remixContext');
+        logger.warn('No se encontró window.__remixContext');
       }
 
       // Obtener el HTML para extraer productos
       const html = await page.content();
-      console.log('✅ HTML obtenido correctamente');
+      logger.success('HTML obtenido correctamente');
 
       // Cerrar el navegador
-      await this.browser.close();
-      this.browser = null;
+      await this.limpiarRecursos();
 
       // Procesar el HTML con Cheerio para extraer productos
       const categorias = await this.procesarHTML(html, productosConOfferId);
+      
+      const duration = Date.now() - this.startTime;
 
       return {
-        categories: categorias,
+        categories: categorias.map(cat => ({
+          ...cat,
+          totalProducts: cat.products.length,
+          lastUpdated: new Date().toISOString()
+        })),
         offerId: offerIdGeneral,
         scrapingDate: new Date().toISOString(),
         totalProducts: categorias.reduce((total, cat) => total + cat.products.length, 0),
-        totalOfferIds: productosConOfferId.length
+        totalOfferIds: productosConOfferId.length,
+        scrapingDuration: duration,
+        proxyUsed: this.getProxyInfo() || undefined,
+        version: '2.0.0'
       };
 
+  }
+
+  private async simularComportamientoHumano(page: Page): Promise<void> {
+    try {
+      // Mover mouse de forma natural
+      await page.mouse.move(100, 100);
+      await this.delay(1000);
+      await page.mouse.move(200, 200);
+      await this.delay(500);
+      
+      // Simular scroll suave
+      await page.evaluate(() => {
+        (globalThis as any).scrollTo({ top: 100, behavior: 'smooth' });
+      });
+      await this.delay(1000);
+      
+      logger.debug('Comportamiento humano simulado');
     } catch (error) {
-      if (this.browser) {
+      logger.warn('Error simulando comportamiento humano', error);
+    }
+  }
+
+  private async delay(ms: number): Promise<void> {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  private async limpiarRecursos(): Promise<void> {
+    if (this.browser) {
+      try {
         await this.browser.close();
+        logger.debug('Navegador cerrado correctamente');
+      } catch (error) {
+        logger.warn('Error cerrando navegador', error);
+      } finally {
         this.browser = null;
       }
-      console.error('❌ Error durante el scraping:', error);
-      throw error;
     }
   }
 
@@ -263,7 +519,7 @@ class FinalCombinedScraper {
     try {
       return this.buscarOfferIdRecursivo(remixContext);
     } catch (error) {
-      console.error('❌ Error extrayendo offerId general:', error);
+      logger.error('Error extrayendo offerId general', error);
       return null;
     }
   }
@@ -274,7 +530,7 @@ class FinalCombinedScraper {
       this.buscarProductosRecursivamente(remixContext, productos);
       return productos;
     } catch (error) {
-      console.error('❌ Error extrayendo productos con offerId:', error);
+      logger.error('Error extrayendo productos con offerId', error);
       return [];
     }
   }
@@ -327,10 +583,10 @@ class FinalCombinedScraper {
 
   private async procesarHTML(html: string, productosConOfferId: any[]): Promise<Categoria[]> {
     try {
-      console.log('🔍 Procesando HTML para extraer productos...');
+      logger.info('Procesando HTML para extraer productos...');
       
       const $ = cheerio.load(html);
-      console.log('✅ HTML cargado correctamente');
+      logger.success('HTML cargado correctamente');
 
       const categoriasMap = new Map<string, Categoria>();
       const productosGlobales = new Set<string>();
@@ -354,13 +610,15 @@ class FinalCombinedScraper {
       // Limpiar y optimizar los datos
       categories = this.limpiarYCategorizar(categories);
 
-      console.log(`📦 Se encontraron ${categories.length} categorías`);
-      console.log(`🔍 Total de productos únicos: ${productosGlobales.size}`);
+      logger.info('Categorías procesadas', {
+        categorias: categories.length,
+        productosUnicos: productosGlobales.size
+      });
 
       return categories;
 
     } catch (error) {
-      console.error('❌ Error durante el procesamiento:', error);
+      logger.error('Error durante el procesamiento', error);
       throw error;
     }
   }
@@ -380,7 +638,7 @@ class FinalCombinedScraper {
             categoriaNombre = sectionId;
           }
           
-          console.log(`🏷️ Categoría encontrada: "${categoriaNombre}" (${sectionId}) - ${productos.length} productos`);
+          logger.debug(`Categoría encontrada: "${categoriaNombre}" (${sectionId}) - ${productos.length} productos`);
           this.agregarProductosACategoria(categoriasMap, categoriaNombre, productos);
         }
       }
@@ -521,7 +779,7 @@ class FinalCombinedScraper {
       };
 
     } catch (error) {
-      console.warn('⚠️ Error extrayendo datos de producto:', error);
+      logger.warn('Error extrayendo datos de producto', error);
       return null;
     }
   }
@@ -623,7 +881,8 @@ class FinalCombinedScraper {
     } else {
       categoriasMap.set(categoriaNombre, {
         name: categoriaNombre,
-        products: productos
+        products: productos,
+        totalProducts: productos.length
       });
     }
   }
@@ -642,7 +901,7 @@ class FinalCombinedScraper {
       const productosConOfferIdValido = productosUnicos.map(producto => {
         if (producto.offerId && producto.offerId !== 'No encontrado') {
           if (offerIdsUsados.has(producto.offerId)) {
-            console.warn(`⚠️ OfferId duplicado encontrado: ${producto.offerId} para producto: ${producto.name} (${producto.vbucks} VBucks)`);
+            logger.warn(`OfferId duplicado encontrado: ${producto.offerId} para producto: ${producto.name} (${producto.vbucks} VBucks)`);
             return {
               ...producto,
               offerId: 'No encontrado (duplicado)'
@@ -659,7 +918,8 @@ class FinalCombinedScraper {
         nombresCategorias.add(categoria.name);
         categoriasLimpias.push({
           name: categoria.name,
-          products: productosConOfferIdValido
+          products: productosConOfferIdValido,
+          totalProducts: productosConOfferIdValido.length
         });
       }
     });
@@ -669,7 +929,7 @@ class FinalCombinedScraper {
 
   // Método para validar la integridad de los datos
   private validarIntegridadDatos(datos: TiendaFortniteCompleta): void {
-    console.log('🔍 Validando integridad de los datos...');
+    logger.info('Validando integridad de los datos...');
     
     const offerIds = new Set<string>();
     const productosDuplicados: string[] = [];
@@ -695,17 +955,18 @@ class FinalCombinedScraper {
       });
     });
 
-    console.log(`📊 Validación completada:`);
-    console.log(`   Total productos: ${totalProductos}`);
-    console.log(`   Productos con offerId válido: ${productosConOfferId}`);
-    console.log(`   Productos sin offerId: ${productosSinOfferId}`);
-    console.log(`   OfferIds únicos: ${offerIds.size}`);
+    logger.info('Validación completada', {
+      totalProductos,
+      productosConOfferId,
+      productosSinOfferId,
+      offerIdsUnicos: offerIds.size
+    });
     
     if (productosDuplicados.length > 0) {
-      console.warn(`⚠️ Se encontraron ${productosDuplicados.length} productos con offerId duplicado:`);
-      productosDuplicados.forEach(duplicado => console.warn(`   - ${duplicado}`));
+      logger.warn(`Se encontraron ${productosDuplicados.length} productos con offerId duplicado`);
+      productosDuplicados.forEach(duplicado => logger.warn(`- ${duplicado}`));
     } else {
-      console.log('✅ No se encontraron offerIds duplicados');
+      logger.success('No se encontraron offerIds duplicados');
     }
   }
 
@@ -717,9 +978,9 @@ class FinalCombinedScraper {
       
       const jsonString = JSON.stringify(datos, null, 2);
       await Bun.write(archivo, jsonString);
-      console.log(`💾 Datos guardados en ${archivo}`);
+      logger.success(`Datos guardados en ${archivo}`);
     } catch (error) {
-      console.error('❌ Error guardando datos:', error);
+      logger.error('Error guardando datos', error);
       throw error;
     }
   }
@@ -733,6 +994,9 @@ class FinalCombinedScraper {
     console.log(`📦 Total de categorías: ${datos.categories.length}`);
     console.log(`🛍️ Total de productos: ${datos.totalProducts}`);
     console.log(`🆔 Total de offerIds encontrados: ${datos.totalOfferIds}`);
+    console.log(`⏱️ Duración del scraping: ${datos.scrapingDuration ? (datos.scrapingDuration / 1000).toFixed(2) + 's' : 'N/A'}`);
+    console.log(`🌐 Proxy usado: ${datos.proxyUsed || 'Ninguno'}`);
+    console.log(`📋 Versión: ${datos.version || '1.0.0'}`);
     
     let totalProductos = 0;
     let totalNuevos = 0;
@@ -763,63 +1027,148 @@ class FinalCombinedScraper {
     console.log(`   Productos con descuento: ${totalConDescuento}`);
     console.log(`   Productos con offerId: ${productosConOfferId}`);
     console.log(`   Porcentaje con offerId: ${((productosConOfferId / totalProductos) * 100).toFixed(1)}%`);
+    
+    // Estadísticas adicionales
+    const categoriasConProductos = datos.categories.filter(cat => cat.products.length > 0).length;
+    const promedioProductosPorCategoria = categoriasConProductos > 0 ? (totalProductos / categoriasConProductos).toFixed(1) : '0';
+    console.log(`   Categorías con productos: ${categoriasConProductos}`);
+    console.log(`   Promedio productos por categoría: ${promedioProductosPorCategoria}`);
   }
 
   // Método para cerrar el navegador si es necesario
   async cerrar(): Promise<void> {
-    if (this.browser) {
-      await this.browser.close();
-      this.browser = null;
-    }
+    await this.limpiarRecursos();
+  }
+
+  // Método para obtener estadísticas de rendimiento
+  getPerformanceStats(): any {
+    return {
+      retryCount: this.retryCount,
+      duration: this.startTime ? Date.now() - this.startTime : 0,
+      proxyUsed: this.getProxyInfo(),
+      config: this.config
+    };
   }
 }
 
-// Función principal
+// Función principal mejorada
 async function main() {
-  const scraper = new FinalCombinedScraper();
   const url = 'https://www.fortnite.com/item-shop?lang=es-ES';
-
+  
   try {
-    console.log('🚀 Iniciando web scraper final de Fortnite...\n');
+    console.log('🚀 Iniciando web scraper final de Fortnite v2.0...\n');
     
-    // Configurar proxy basado en argumentos de línea de comandos
-    const args = process.argv.slice(2);
+    // Configurar scraper con argumentos de línea de comandos
+    const config = parsearArgumentos();
+    const scraper = new FinalCombinedScraper(config);
     
-    if (args.includes('--proxy-random') || args.includes('-pr')) {
-      scraper.setProxy(undefined, true);
-    } else if (args.includes('--proxy') || args.includes('-p')) {
-      const proxyArg = args.find(arg => arg.startsWith('--proxy=') || arg.startsWith('-p='));
-      if (proxyArg) {
-        const proxyIndex = parseInt(proxyArg.split('=')[1] || '0') - 1; // Convertir a índice base 0
-        if (proxyIndex >= 0 && proxyIndex < 10) {
-          scraper.setProxy(proxyIndex);
-        } else {
-          console.log('❌ Índice de proxy inválido. Usa un número entre 1 y 10');
-          process.exit(1);
-        }
-      } else {
-        console.log('❌ Debes especificar un índice de proxy. Ejemplo: --proxy=1 o -p=1');
-        process.exit(1);
-      }
-    } else if (args.includes('--no-proxy')) {
-      scraper.disableProxy();
+    // Configurar proxy basado en argumentos
+    configurarProxy(scraper);
+    
+    // Ejecutar scraping
+    const resultado = await scraper.scrapeTiendaCompleta(url);
+    
+    if (resultado.success && resultado.data) {
+      // Mostrar resumen
+      scraper.mostrarResumen(resultado.data);
+      
+      // Guardar datos
+      const archivo = generarNombreArchivo();
+      await scraper.guardarDatos(resultado.data, archivo);
+      
+      // Mostrar estadísticas de rendimiento
+      mostrarEstadisticasRendimiento(resultado, scraper);
+      
+      console.log('\n✅ Scraping final completado exitosamente!');
+    } else {
+      console.error('\n❌ Error en el scraping:', resultado.error);
+      process.exit(1);
     }
     
-    const datos = await scraper.scrapeTiendaCompleta(url);
-    
-    // Mostrar resumen
-    scraper.mostrarResumen(datos);
-    
-    // Guardar datos
-    await scraper.guardarDatos(datos);
-    
-    console.log('\n✅ Scraping final completado exitosamente!');
-    
   } catch (error) {
-    console.error('\n❌ Error en el scraping:', error);
-    await scraper.cerrar();
+    console.error('\n❌ Error crítico en el scraping:', error);
     process.exit(1);
   }
+}
+
+// Función para parsear argumentos de línea de comandos
+function parsearArgumentos(): Partial<ScrapingConfig> {
+  const args = process.argv.slice(2);
+  const config: Partial<ScrapingConfig> = {};
+  
+  // Parsear argumentos
+  args.forEach(arg => {
+    if (arg.startsWith('--timeout=')) {
+      config.timeout = parseInt(arg.split('=')[1] || '60000');
+    } else if (arg.startsWith('--retries=')) {
+      config.retryAttempts = parseInt(arg.split('=')[1] || '3');
+    } else if (arg.startsWith('--delay=')) {
+      config.delayBetweenRequests = parseInt(arg.split('=')[1] || '2000');
+    } else if (arg === '--headless=false') {
+      config.headless = false;
+    } else if (arg.startsWith('--log-level=')) {
+      config.logLevel = arg.split('=')[1] || 'info';
+    }
+  });
+  
+  return config;
+}
+
+// Función para configurar proxy
+function configurarProxy(scraper: FinalCombinedScraper): void {
+  const args = process.argv.slice(2);
+  
+  if (args.includes('--proxy-random') || args.includes('-pr')) {
+    scraper.setProxy(undefined, true);
+  } else if (args.includes('--proxy') || args.includes('-p')) {
+    const proxyArg = args.find(arg => arg.startsWith('--proxy=') || arg.startsWith('-p='));
+    if (proxyArg) {
+      const proxyIndex = parseInt(proxyArg.split('=')[1] || '0') - 1;
+      if (proxyIndex >= 0 && proxyIndex < 10) {
+        scraper.setProxy(proxyIndex);
+      } else {
+        console.log('❌ Índice de proxy inválido. Usa un número entre 1 y 10');
+        process.exit(1);
+      }
+    } else {
+      console.log('❌ Debes especificar un índice de proxy. Ejemplo: --proxy=1 o -p=1');
+      process.exit(1);
+    }
+  } else if (args.includes('--no-proxy')) {
+    scraper.disableProxy();
+  } else {
+    // Por defecto, usar proxy aleatorio (ideal para cron)
+    scraper.setProxy(undefined, true);
+  }
+}
+
+// Función para generar nombre de archivo con timestamp
+function generarNombreArchivo(): string {
+  const now = new Date();
+  const timestamp = now.toISOString().replace(/[:.]/g, '-');
+  return `fortnite_shop_${timestamp}.json`;
+}
+
+// Función para mostrar estadísticas de rendimiento
+function mostrarEstadisticasRendimiento(resultado: ScrapingResult, scraper: FinalCombinedScraper): void {
+  console.log('\n📊 ESTADÍSTICAS DE RENDIMIENTO:');
+  console.log('================================');
+  console.log(`⏱️ Duración total: ${(resultado.duration / 1000).toFixed(2)}s`);
+  console.log(`🔄 Intentos realizados: ${resultado.attempts}`);
+  console.log(`🌐 Proxy usado: ${resultado.proxyUsed || 'Ninguno'}`);
+  
+  if (resultado.data) {
+    console.log(`📦 Productos por segundo: ${(resultado.data.totalProducts / (resultado.duration / 1000)).toFixed(2)}`);
+    console.log(`🆔 OfferIds por segundo: ${(resultado.data.totalOfferIds / (resultado.duration / 1000)).toFixed(2)}`);
+  }
+  
+  const stats = scraper.getPerformanceStats();
+  console.log(`🔧 Configuración usada:`, {
+    timeout: stats.config.timeout,
+    retryAttempts: stats.config.retryAttempts,
+    delayBetweenRequests: stats.config.delayBetweenRequests,
+    headless: stats.config.headless
+  });
 }
 
 // Ejecutar si es el archivo principal
@@ -827,4 +1176,13 @@ if (import.meta.main) {
   main();
 }
 
-export { FinalCombinedScraper, type ProductoCompleto, type Categoria, type TiendaFortniteCompleta, type ImagenProducto };
+export { 
+  FinalCombinedScraper, 
+  Logger,
+  type ProductoCompleto, 
+  type Categoria, 
+  type TiendaFortniteCompleta, 
+  type ImagenProducto,
+  type ScrapingConfig,
+  type ScrapingResult
+};

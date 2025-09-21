@@ -48,7 +48,7 @@ bun final-combined-scraper.ts --proxy=5
 bun final-combined-scraper.ts --no-proxy
 ```
 
-#### Opción D: Sin Argumentos (sin proxy por defecto)
+#### Opción D: Sin Argumentos (proxy aleatorio por defecto - ideal para cron)
 ```bash
 bun final-combined-scraper.ts
 ```
@@ -75,6 +75,11 @@ const datos = await scraper.scrapeTiendaCompleta('https://www.fortnite.com/item-
 
 ## 🔧 Configuración Técnica
 
+### Comportamiento por Defecto
+- **Sin argumentos**: Usa proxy aleatorio automáticamente (ideal para cron jobs)
+- **Con argumentos**: Sigue la lógica específica de los argumentos
+- **Cron job**: Se ejecuta diariamente a las 7:00 PM (hora Perú) con proxy aleatorio
+
 ### Estructura de Proxy
 ```typescript
 interface ProxyConfig {
@@ -91,6 +96,30 @@ interface ProxyConfig {
 - **Todos**: `getAllProxies()` - Obtiene todos los proxies
 
 ## 📊 Monitoreo y Diagnóstico
+
+## ⏰ Cron Job Automático
+
+### Configuración del Cron Job
+El servidor incluye un cron job que se ejecuta automáticamente:
+- **Frecuencia**: Todos los días a las 7:00 PM (hora Perú)
+- **Proxy**: Usa proxy aleatorio automáticamente
+- **Proceso**: 
+  1. Ejecuta el scraper con proxy aleatorio
+  2. Genera JSON limpio
+  3. Extrae colores de productos (también con proxy aleatorio)
+  4. Actualiza los datos en memoria
+
+### Probar el Comportamiento del Cron
+```bash
+# Simular ejecución de cron (sin argumentos = proxy aleatorio)
+bun test-cron-proxy.ts
+
+# Probar selección de proxies aleatorios
+bun test-cron-proxy.ts --test-proxy-selection
+
+# Probar extracción de colores con proxy
+bun test-extraccion-colores-proxy.ts
+```
 
 ### Verificar Estado de Proxies
 ```bash

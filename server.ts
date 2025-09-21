@@ -74,8 +74,8 @@ async function ejecutarScraper(): Promise<void> {
     const { promisify } = await import('util');
     const execAsync = promisify(exec);
     
-    // Ejecutar el scraper final
-    console.log('📦 Ejecutando scraper final...');
+    // Ejecutar el scraper final con proxy aleatorio (por defecto)
+    console.log('📦 Ejecutando scraper final con proxy aleatorio...');
     await execAsync('bun run final-combined-scraper.ts');
     
     // Generar JSON limpio
@@ -100,38 +100,103 @@ async function ejecutarExtraccionColores(): Promise<void> {
   try {
     const puppeteer = await import('puppeteer');
     const fs = await import('fs');
+    const { getRandomProxy } = await import('./proxy-config');
     
-    // Configuración de proxy (opcional)
-    const proxyConfig = process.env.PROXY_URL ? {
-      server: process.env.PROXY_URL,
-      username: process.env.PROXY_USERNAME,
-      password: process.env.PROXY_PASSWORD
-    } : undefined;
+    // Usar proxy aleatorio por defecto
+    const proxyConfig = getRandomProxy();
+    console.log('🎲 Seleccionando proxy aleatorio para extracción de colores...');
 
     const browser = await puppeteer.default.launch({ 
       headless: true,
       args: [
         '--no-sandbox', 
         '--disable-setuid-sandbox',
-        ...(proxyConfig ? [`--proxy-server=${proxyConfig.server}`] : [])
+        '--disable-dev-shm-usage',
+        '--disable-accelerated-2d-canvas',
+        '--no-first-run',
+        '--no-zygote',
+        '--disable-gpu',
+        '--disable-web-security',
+        '--disable-features=VizDisplayCompositor',
+        '--disable-blink-features=AutomationControlled',
+        '--disable-extensions',
+        '--disable-plugins',
+        '--disable-default-apps',
+        '--disable-sync',
+        '--disable-translate',
+        '--hide-scrollbars',
+        '--mute-audio',
+        '--no-default-browser-check',
+        '--no-pings',
+        '--disable-background-timer-throttling',
+        '--disable-backgrounding-occluded-windows',
+        '--disable-renderer-backgrounding',
+        '--disable-features=TranslateUI',
+        '--disable-ipc-flooding-protection',
+        // Proxy args
+        `--proxy-server=${proxyConfig.server}`
       ]
     });
     
     try {
       const page = await browser.newPage();
       
-      // Configurar proxy con autenticación si está disponible
-      if (proxyConfig && proxyConfig.username && proxyConfig.password) {
-        await page.authenticate({
-          username: proxyConfig.username,
-          password: proxyConfig.password
-        });
-        console.log('🔐 Proxy configurado con autenticación para extracción de colores');
-      } else if (proxyConfig) {
-        console.log('🌐 Proxy configurado sin autenticación para extracción de colores');
-      }
+      // Configurar proxy con autenticación
+      await page.authenticate({
+        username: proxyConfig.username,
+        password: proxyConfig.password
+      });
+      console.log(`🔐 Proxy configurado para extracción de colores: ${proxyConfig.server}`);
+      console.log(`👤 Usuario: ${proxyConfig.username}`);
+      console.log(`🆔 Sesión: ${proxyConfig.password.split('_session-')[1]?.split('_lifetime')[0] || 'N/A'}`);
       
-      await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
+      // Configurar user agent y headers
+      await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
+      
+      // Configurar headers adicionales para parecer más humano
+      await page.setExtraHTTPHeaders({
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'Accept-Language': 'es-ES,es;q=0.9,en;q=0.8',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'DNT': '1',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1',
+        'Sec-Fetch-Dest': 'document',
+        'Sec-Fetch-Mode': 'navigate',
+        'Sec-Fetch-Site': 'none',
+        'Sec-Fetch-User': '?1',
+        'Cache-Control': 'max-age=0'
+      });
+      
+      // Configurar viewport
+      await page.setViewport({ width: 1920, height: 1080 });
+      
+      // Ocultar detección de automatización
+      await page.evaluateOnNewDocument(() => {
+        Object.defineProperty(navigator, 'webdriver', {
+          get: () => undefined,
+        });
+        
+        // Ocultar chrome runtime
+        (globalThis as any).chrome = {
+          runtime: {},
+        };
+        
+        // Ocultar plugins
+        Object.defineProperty(navigator, 'plugins', {
+          get: () => [1, 2, 3, 4, 5],
+        });
+        
+        // Ocultar languages
+        Object.defineProperty(navigator, 'languages', {
+          get: () => ['es-ES', 'es', 'en'],
+        });
+      });
+      
+      // Configurar cookies para evitar verificación de seguridad
+      const { FORTNITE_COOKIES } = await import('./cookies-config');
+      console.log('🍪 Configurando cookies para extracción de colores...');
+      await page.setCookie(...FORTNITE_COOKIES);
       
       console.log('🌐 Navegando a la página para extraer colores...');
       await page.goto('https://www.fortnite.com/item-shop', { 
@@ -139,12 +204,20 @@ async function ejecutarExtraccionColores(): Promise<void> {
         timeout: 60000 
       });
       
+      // Esperar a que se cargue el contenido con delay aleatorio
       console.log('⏳ Esperando a que se cargue el contenido...');
-      await new Promise(resolve => setTimeout(resolve, 5000));
+      const randomDelay = Math.floor(Math.random() * 3000) + 3000; // 3-6 segundos
+      await new Promise(resolve => setTimeout(resolve, randomDelay));
+      
+      // Simular comportamiento humano - mover mouse
+      await page.mouse.move(100, 100);
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      await page.mouse.move(200, 200);
+      await new Promise(resolve => setTimeout(resolve, 500));
       
       console.log('🔍 Extrayendo window.__remixContext...');
       const remixContext = await page.evaluate(() => {
-        return (window as any).__remixContext;
+        return (globalThis as any).__remixContext;
       });
       
       if (!remixContext) {
@@ -563,7 +636,7 @@ async function iniciarServidor() {
       console.log(`🌐 URL: http://localhost:${PORT}`);
       console.log(`📚 Documentación: http://localhost:${PORT}/api`);
       console.log(`💚 Salud: http://localhost:${PORT}/api/health`);
-      console.log('⏰ Actualización automática: Todos los días a las 7:00 PM (hora Perú)');
+      console.log('⏰ Actualización automática: Todos los días a las 7:00 PM (hora Perú) con proxy aleatorio');
       console.log('🛡️  Rate limiting activado para prevenir DDoS');
     });
   } catch (error) {
