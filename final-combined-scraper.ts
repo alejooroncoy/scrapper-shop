@@ -1142,11 +1142,9 @@ function configurarProxy(scraper: FinalCombinedScraper): void {
   }
 }
 
-// Función para generar nombre de archivo con timestamp
+// Función para generar nombre de archivo fijo
 function generarNombreArchivo(): string {
-  const now = new Date();
-  const timestamp = now.toISOString().replace(/[:.]/g, '-');
-  return `fortnite_shop_${timestamp}.json`;
+  return `fortnite_shop_latest.json`;
 }
 
 // Función para mostrar estadísticas de rendimiento

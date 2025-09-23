@@ -53,27 +53,20 @@ let lastUpdate: Date | null = null;
 // Función para cargar datos desde el archivo JSON más reciente
 async function cargarDatos(): Promise<void> {
   try {
-    // Buscar el archivo JSON más reciente
-    const files = await fs.readdir(__dirname);
-    const jsonFiles = files.filter(file => 
-      file.startsWith('fortnite_shop_') && 
-      file.endsWith('.json') &&
-      !file.includes('clean')
-    );
+    // Prioridad: 1) fortnite_shop_latest.json, 2) fortnite_shop_clean.json
+    const latestPath = path.join(__dirname, 'fortnite_shop_latest.json');
+    const cleanPath = path.join(__dirname, 'fortnite_shop_clean.json');
     
-    if (jsonFiles.length === 0) {
-      // Si no hay archivos con timestamp, usar el clean
-      const filePath = path.join(__dirname, 'fortnite_shop_clean.json');
-      const data = await fs.readFile(filePath, 'utf-8');
+    try {
+      // Intentar cargar el archivo latest primero
+      const data = await fs.readFile(latestPath, 'utf-8');
+      fortniteData = JSON.parse(data);
+      console.log('✅ Datos cargados desde fortnite_shop_latest.json');
+    } catch (error) {
+      // Si no existe latest, usar clean
+      const data = await fs.readFile(cleanPath, 'utf-8');
       fortniteData = JSON.parse(data);
       console.log('✅ Datos cargados desde fortnite_shop_clean.json');
-    } else {
-      // Usar el archivo más reciente
-      const latestFile = jsonFiles.sort().pop();
-      const filePath = path.join(__dirname, latestFile!);
-      const data = await fs.readFile(filePath, 'utf-8');
-      fortniteData = JSON.parse(data);
-      console.log(`✅ Datos cargados desde ${latestFile}`);
     }
     
     lastUpdate = new Date();
