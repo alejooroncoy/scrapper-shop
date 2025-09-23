@@ -108,6 +108,7 @@ async function ejecutarScraper(): Promise<void> {
     
     // Recargar los datos después del scraping
     console.log('🔄 Recargando datos en el servidor...');
+
     await cargarDatos();
     console.log('✅ Actualización automática completada');
   } catch (error) {
