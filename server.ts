@@ -50,14 +50,33 @@ app.use(express.json());
 let fortniteData: any = null;
 let lastUpdate: Date | null = null;
 
-// Función para cargar datos desde el archivo JSON limpio
+// Función para cargar datos desde el archivo JSON más reciente
 async function cargarDatos(): Promise<void> {
   try {
-    const filePath = path.join(__dirname, 'fortnite_shop_clean.json');
-    const data = await fs.readFile(filePath, 'utf-8');
-    fortniteData = JSON.parse(data);
+    // Buscar el archivo JSON más reciente
+    const files = await fs.readdir(__dirname);
+    const jsonFiles = files.filter(file => 
+      file.startsWith('fortnite_shop_') && 
+      file.endsWith('.json') &&
+      !file.includes('clean')
+    );
+    
+    if (jsonFiles.length === 0) {
+      // Si no hay archivos con timestamp, usar el clean
+      const filePath = path.join(__dirname, 'fortnite_shop_clean.json');
+      const data = await fs.readFile(filePath, 'utf-8');
+      fortniteData = JSON.parse(data);
+      console.log('✅ Datos cargados desde fortnite_shop_clean.json');
+    } else {
+      // Usar el archivo más reciente
+      const latestFile = jsonFiles.sort().pop();
+      const filePath = path.join(__dirname, latestFile!);
+      const data = await fs.readFile(filePath, 'utf-8');
+      fortniteData = JSON.parse(data);
+      console.log(`✅ Datos cargados desde ${latestFile}`);
+    }
+    
     lastUpdate = new Date();
-    console.log('✅ Datos cargados desde el archivo JSON limpio');
   } catch (error) {
     console.error('❌ Error al cargar datos:', error);
     fortniteData = null;
@@ -88,6 +107,7 @@ async function ejecutarScraper(): Promise<void> {
     await ejecutarExtraccionColores();
     
     // Recargar los datos después del scraping
+    console.log('🔄 Recargando datos en el servidor...');
     await cargarDatos();
     console.log('✅ Actualización automática completada');
   } catch (error) {
@@ -542,7 +562,8 @@ app.get('/api/health', (req, res) => {
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
     lastUpdate: lastUpdate?.toISOString() || null,
-    dataAvailable: !!fortniteData
+    dataAvailable: !!fortniteData,
+    dataSource: fortniteData?.scrapingDate || 'No disponible'
   });
 });
 

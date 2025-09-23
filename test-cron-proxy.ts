@@ -22,15 +22,20 @@ async function testCronWithProxy() {
     // No configurar proxy explícitamente - debería usar aleatorio por defecto
     // (esto simula lo que pasa cuando se ejecuta desde cron sin argumentos)
     
-    const datos = await scraper.scrapeTiendaCompleta(url);
+    const resultado = await scraper.scrapeTiendaCompleta(url);
     
-    console.log('\n✅ Prueba completada exitosamente!');
-    console.log(`📊 Productos encontrados: ${datos.totalProducts}`);
-    console.log(`📦 Categorías: ${datos.categories.length}`);
-    console.log(`🆔 OfferId general: ${datos.offerId}`);
-    
-    // Mostrar resumen
-    scraper.mostrarResumen(datos);
+    if (resultado.success && resultado.data) {
+      const datos = resultado.data;
+      console.log('\n✅ Prueba completada exitosamente!');
+      console.log(`📊 Productos encontrados: ${datos.totalProducts}`);
+      console.log(`📦 Categorías: ${datos.categories.length}`);
+      console.log(`🆔 OfferId general: ${datos.offerId}`);
+      
+      // Mostrar resumen
+      scraper.mostrarResumen(datos);
+    } else {
+      console.error('❌ Error en el scraping:', resultado.error);
+    }
     
   } catch (error) {
     console.error('❌ Error en la prueba:', error);

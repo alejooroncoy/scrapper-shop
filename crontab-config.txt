@@ -1,0 +1,8 @@
+# Cron job para scraper de Fortnite
+# Se ejecuta todos los días a las 2:00 AM
+0 2 * * * /Users/USER/Desktop/Projects/freelancer/web-scrapping/cron-scraper.sh
+
+# Alternativas de horarios (descomenta la que prefieras):
+# Cada 6 horas: 0 */6 * * * /Users/USER/Desktop/Projects/freelancer/web-scrapping/cron-scraper.sh
+# Cada 12 horas: 0 */12 * * * /Users/USER/Desktop/Projects/freelancer/web-scrapping/cron-scraper.sh
+# Solo días laborables a las 8 AM: 0 8 * * 1-5 /Users/USER/Desktop/Projects/freelancer/web-scrapping/cron-scraper.sh
