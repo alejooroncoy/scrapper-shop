@@ -11,9 +11,11 @@ import { CleanJsonGenerator } from './clean-json-generator';
 async function testScraper() {
   console.log('🧪 Iniciando prueba del scraper mejorado...\n');
   
+  let scraper: FinalCombinedScraper | null = null;
+  
   try {
     // Configurar scraper con configuración robusta
-    const scraper = new FinalCombinedScraper({
+    scraper = new FinalCombinedScraper({
       timeout: 120000, // 2 minutos
       retryAttempts: 3, // 3 intentos
       delayBetweenRequests: 3000, // 3 segundos entre intentos
