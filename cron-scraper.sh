@@ -28,6 +28,27 @@ bun run final-combined-scraper.ts >> "$LOG_FILE" 2>&1
 if [ $? -eq 0 ]; then
     echo "✅ Scraping completado exitosamente - $(date)" >> "$LOG_FILE"
     
+    # Generar JSON limpio
+    echo "🧹 Generando JSON limpio..." >> "$LOG_FILE"
+    bun run clean-json-generator.ts >> "$LOG_FILE" 2>&1
+    
+    if [ $? -eq 0 ]; then
+        echo "✅ JSON limpio generado exitosamente - $(date)" >> "$LOG_FILE"
+        
+        # Extraer colores de los productos
+        echo "🎨 Extrayendo colores de los productos..." >> "$LOG_FILE"
+        bun run execute-color-extraction.ts >> "$LOG_FILE" 2>&1
+        
+        if [ $? -eq 0 ]; then
+            echo "✅ Colores extraídos exitosamente - $(date)" >> "$LOG_FILE"
+            echo "🎉 Proceso completo finalizado exitosamente - $(date)" >> "$LOG_FILE"
+        else
+            echo "⚠️ Error extrayendo colores, pero el scraping fue exitoso - $(date)" >> "$LOG_FILE"
+        fi
+    else
+        echo "⚠️ Error generando JSON limpio, pero el scraping fue exitoso - $(date)" >> "$LOG_FILE"
+    fi
+    
     # Enviar notificación (opcional)
     # echo "Fortnite scraper completado exitosamente" | mail -s "Scraper Success" tu-email@ejemplo.com
 else
