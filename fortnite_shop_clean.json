@@ -19,7 +19,10 @@
             "https://ucs-images.fortnite.com/blobs/c8/56/5e4d-22fe-4de8-b14e-723116bd8453?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=71016ca9043169f1bbefaae31c86b7f5d14f8e4575ba482f1e6b1997bf3aec60&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/black-widow-snow-suit-bundle-9c8cf496?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Viuda Negra (traje nevado)",
@@ -35,7 +38,10 @@
             "https://ucs-images.fortnite.com/blobs/25/e2/1e57-9c29-46cc-90ec-f27b970e678d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=9d7c1c417f9e56d9e4aaf3fc2bc05fe03d378e5551c8a874dd5bfc1a00a0f462&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/black-widow-snow-suit-c8ec675c?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Colmillos de la Viuda",
@@ -51,7 +57,10 @@
             "https://ucs-images.fortnite.com/blobs/bb/2e/141f-738c-4603-b213-9ade792b408d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=79caeb62293d7f3b0aadcd6b1772ec070f8ba81afe71dc408f47c9a6cac580dd&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/widows-fangs-a2c3547b?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Enviudador",
@@ -67,7 +76,10 @@
             "https://ucs-images.fortnite.com/blobs/65/e4/0320-bcf2-4567-981f-4f17e74ddc91?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=dad45003ca70931648cd06c361c757a8adc08292c53d9d264fd3ad3fca33670d&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/gliders/widowmaker-8d19dcdc?lang=es-ES",
-          "type": "Ala delta"
+          "type": "Ala delta",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "LOTE DE OJO DE HALCÓN",
@@ -85,7 +97,10 @@
             "https://ucs-images.fortnite.com/blobs/80/53/2cdc-456b-4ef5-b220-0251a8024590?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=9e3bfba70425122eb5e734775f447b351dc5832e71abb1402b5d6f84315daf9d&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/hawkeye-bundle-fe23b628?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Kate Bishop",
@@ -101,7 +116,10 @@
             "https://ucs-images.fortnite.com/blobs/09/1a/4bcf-f55e-4295-80b6-56eed2111c09?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=b30e4f2e1bc7fe255d9da5dd4e7910e69d9b19bdaa3c0d774baa62c736bc2bc2&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/kate-bishop-233dbdd5?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Clint Barton",
@@ -117,7 +135,10 @@
             "https://ucs-images.fortnite.com/blobs/c0/5d/713d-f2be-4a35-be83-364a119d801f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=1c3d8db4f314ca924a7fa3c19aa37299e9f3381d555918269559d1bb00a55b7a&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/clint-barton-9cf8e470?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Pico ballesta",
@@ -133,7 +154,10 @@
             "https://ucs-images.fortnite.com/blobs/7d/8d/2ac3-8617-42f7-a117-62d77b4df1d6?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=cfd6c8774b248855f318000e5a68c95136b550cd07f6a69387ae7f7e9aa4d395&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/pickross-bow-b3f019ed?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Rebanadora rígida",
@@ -149,7 +173,10 @@
             "https://ucs-images.fortnite.com/blobs/03/f3/a522-2de3-4d83-92f2-b72bea3baebe?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=3ed078a96e31bedaf14f59e3ebadccd35a483abcc66f50304e6efb94c29a8c0d&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/taut-slicer-94e344c1?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Arquero aéreo",
@@ -166,7 +193,10 @@
             "https://ucs-images.fortnite.com/blobs/ff/7e/750d-87cd-4151-8058-14abbe90d439?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=2ef556f8060c18acc2e0a0fbc458b9b5c13719ff61faadba864a216c8b3c3be5&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/gliders/aerial-archer-f825fbff?lang=es-ES",
-          "type": "Ala delta"
+          "type": "Ala delta",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Traje de Viuda Negra",
@@ -182,7 +212,10 @@
             "https://ucs-images.fortnite.com/blobs/7f/27/dadf-2d32-4ac0-a917-a8f9c85af9d1?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=05e1c17a1fed99783c61d86913aaf12a28d4115e8db9ca397e5326862cd4d8f6&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/black-widow-outfit-05f6a4eb?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Picadura de la Viuda",
@@ -198,7 +231,10 @@
             "https://ucs-images.fortnite.com/blobs/b6/05/357a-3470-4e24-b5ff-791a02f1a7d5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=aaf49daa23be522148f5db2d00fec57547feb45b2a5c740dd1e43882838f640a&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/widows-bite-8000d3a0?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Lote de Thunderbolts",
@@ -219,7 +255,10 @@
             "https://ucs-images.fortnite.com/blobs/a9/d4/ec98-6b64-470a-8130-b3cd01f06464?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=595adc8a63ab9da51064b9e29c5b3cd1598a52ea4097c5e5c0c1b3d74f404d8e&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/thunderbolts-bundle-faff3710?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Soldado de Invierno (a pluma y tinta)",
@@ -238,7 +277,10 @@
             "https://ucs-images.fortnite.com/blobs/2f/b7/5155-865c-426a-bfb3-72aa6afb7a2a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=d9a9345c1db44707bae375c459eecba31aca89611211f56141e725d72f3973e7&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/winter-soldier-pen-ink-f0180531?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Hacha de armamento",
@@ -254,7 +296,10 @@
             "https://ucs-images.fortnite.com/blobs/e5/68/bc6d-52f5-4646-80da-5e4bb5db54a2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=1eb3a67c5f2d483dee9d51caa4b62b407c919e5a3b5f241520bb200b426d9f7b&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/armament-axe-9bcd0bd2?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Repuesto del Soldado de Invierno",
@@ -270,7 +315,10 @@
             "https://ucs-images.fortnite.com/blobs/9d/f5/6ec6-7e51-45ec-82a1-456298715236?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=1a58bc9abaecfff7267dfa21121af26f2e50849b2853502a3c3cae087915de43&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/back-bling/winter-soldiers-spare-36e939fa?lang=es-ES",
-          "type": "Accesorio mochilero"
+          "type": "Accesorio mochilero",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Macarrones de la Viuda",
@@ -286,7 +334,10 @@
             "https://ucs-images.fortnite.com/blobs/db/6e/92a9-3aee-41ca-bcf1-4fe55d89f3d0?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=96e56ba99c50a51bb90445a6dfa33f0636c873428ac5da679b63fdfa6cd6d3f4&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/widows-mac-cd401c88?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Viuda Blanca (a pluma y tinta)",
@@ -305,7 +356,10 @@
             "https://ucs-images.fortnite.com/blobs/5f/fb/79ea-0862-4a90-b95e-fcaa5cfae86d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=b5c6ca01109f68548898603197e1f63baf3c913b5181859fdb684062e5805cd3&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/white-widow-pen-ink-43dbefb2?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Colmillos de la Viuda Blanca",
@@ -321,7 +375,10 @@
             "https://ucs-images.fortnite.com/blobs/41/d6/7ac5-fd9e-481f-8cdd-735f21fe9985?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=01fccf9f06c5155763c3114d9624458bc8f8d0151bb6f71e79dcf22feef66066&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/white-widows-fangs-83c5c6ee?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Soldado de Invierno",
@@ -337,7 +394,10 @@
             "https://ucs-images.fortnite.com/blobs/41/d9/5d2e-c29b-49f2-82e4-38fab13f91ae?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=d883c19988113d7a0a52b0ab81953a157b3c299b2a645d4f88553b00c84b27c9&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/wraps/winter-soldier-8c703acc?lang=es-ES",
-          "type": "Envoltorio"
+          "type": "Envoltorio",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Viuda Blanca",
@@ -353,7 +413,10 @@
             "https://ucs-images.fortnite.com/blobs/11/15/2de3-acb8-41dd-8aa1-72c5cfeb0c3f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=8993506e1a89db9c94652cb4d95a4bf5ed8f7f50a3ecf5d99157fd174a1527b7&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/wraps/white-widow-018b2700?lang=es-ES",
-          "type": "Envoltorio"
+          "type": "Envoltorio",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Lote de Iron Man Mark-45",
@@ -371,7 +434,10 @@
             "https://ucs-images.fortnite.com/blobs/ee/25/1335-6ba9-4283-960f-ce9a21ef5b14?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=d40a0c840221868078f63e6b91703ba4064c53759c7cbfb9b3d30653c0745189&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/iron-man-mk-45-bundle-00475183?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Iron Man Mark-45",
@@ -387,7 +453,10 @@
             "https://ucs-images.fortnite.com/blobs/5e/a0/c0ae-3e06-41dd-97e9-b123d3cb223a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=01219e9533f456e8604c32bdba05d11b1344f009add5b3543b9bd7803e446550&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/iron-man-mk-45-ecd84ba2?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Hojas de energía Mark-45",
@@ -403,7 +472,10 @@
             "https://ucs-images.fortnite.com/blobs/5b/a0/01bf-e79b-4b1f-8dc2-ba1817e8e28e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=8888f4ea9c119daed7d001ee23c2229fe1cd7b927ead2654f5151cc7ca2c0607&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/mark-45-energy-blades-0aef7af0?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Reactor de arco",
@@ -419,7 +491,10 @@
             "https://ucs-images.fortnite.com/blobs/b7/d1/1210-c7b1-48bc-94b2-f087b7ad1b52?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=d9a5d21b0b1ad854719ef8ce1061130e9cb5cda72447c8b145fd17afd83c5cf3&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/wraps/arc-reaction-6f201b4e?lang=es-ES",
-          "type": "Envoltorio"
+          "type": "Envoltorio",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Bajo Mark-45",
@@ -435,7 +510,10 @@
             "https://ucs-images.fortnite.com/blobs/a9/39/be9e-66e8-41e4-80a3-093bda2171fc?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=6c6c3d4753753ea3773f97b9cb14a9fe4c04b6560e474946e7b02f8bed09aff7&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bass/mark-45-bass-89be8ff6?lang=es-ES",
-          "type": "Bajo"
+          "type": "Bajo",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Lote de Legión de hierro",
@@ -462,7 +540,10 @@
             "https://ucs-images.fortnite.com/blobs/3a/11/0a30-a5f1-4701-8c29-66dea3e96ec0?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=e8dabe06e678857dd1803129b7b34a68b4f7219d556a90ff7d48601829eebbdd&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/iron-legion-bundle-c9808b56?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Iron Man",
@@ -488,7 +569,10 @@
             "https://ucs-images.fortnite.com/blobs/d4/2d/5f44-475d-4add-86f5-f5e77416dd34?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=23150f6ec22c1ac0ff7ce39399e79203c39e2a9f93f1a31daf9df333dd2fa934&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/iron-man-ad4235bd?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Reactor ARC",
@@ -513,7 +597,10 @@
             "https://ucs-images.fortnite.com/blobs/87/74/a7e5-332a-4a00-a2e2-a62a07147538?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=4e4aaa0c4dab918ec5116e9e88b8bf6d7f5af73e1fea46d77e12faeb2065dbbe&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/back-bling/arc-counter-fa68b877?lang=es-ES",
-          "type": "Accesorio mochilero"
+          "type": "Accesorio mochilero",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         },
         {
           "name": "Mazo de Iron Man",
@@ -538,7 +625,10 @@
             "https://ucs-images.fortnite.com/blobs/94/ee/3449-f938-4a98-a5b2-7dcdfccae1b6?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=653d50ef2d48c43533cbcbdf4b9e0780e0788ce86375cd35d017b9e09eaf8cc6&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/iron-sledge-3f60cd88?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#86661C",
+          "color2": "#DDAE43",
+          "color3": "#7F6326"
         }
       ]
     },
@@ -561,7 +651,9 @@
             "https://ucs-images.fortnite.com/blobs/5f/1a/df69-6ea8-4c3b-b620-00dbb5388ccf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=121a7a45d1a41ffeacf41e59e1d69d5049690786ff544be3c67c1f75fc1dc456&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/lord-zedd-bundle-7106942e?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Lord Zedd",
@@ -577,7 +669,9 @@
             "https://ucs-images.fortnite.com/blobs/dc/b0/fcd1-6f61-4183-9f8a-686f234c8e13?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=77ae9d0ec38d8997e4fd853f9e3981476d31707035afaebb0bb1b55ca8a667c3&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/lord-zedd-7a7b9ad8?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Báculo Z",
@@ -593,7 +687,9 @@
             "https://ucs-images.fortnite.com/blobs/de/9e/e6b9-e589-4657-bb92-0e2577346b99?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=48da916cf90330876b9a66a7f68efcecb30279e12011c79d7e4b2504f8af0aaf&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/z-staff-4685bf4a?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Magia de Lord Zedd",
@@ -609,7 +705,9 @@
             "https://ucs-images.fortnite.com/blobs/37/8e/abcd-4909-40be-808f-d25b5d958964?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=20d7b02cf64c980e7c3d4135235424591f3fe000d68ed3b440236c63c4ca6f87&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/lord-zedds-magic-401631e3?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Lote de Power Rangers",
@@ -629,7 +727,9 @@
             "https://ucs-images.fortnite.com/blobs/8a/bb/5799-5e5f-4f66-a2ec-b73a6e66e9c3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=0812ee51cd147008114e87d657183de313cad1752079a53784906774be9b07ce&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/power-rangers-bundle-223557e5?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Ranger azul",
@@ -645,7 +745,9 @@
             "https://ucs-images.fortnite.com/blobs/51/f0/f713-2094-4178-84e6-7a2415c1f4ac?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=6a9ed8de228a9bbf23b09c7175a029d37cb3043bef09c78baf3650b2480c4694&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/blue-ranger-bd01a1c7?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Moneda de triceratops",
@@ -664,7 +766,9 @@
             "https://ucs-images.fortnite.com/blobs/21/55/0b46-d1f6-4011-aa2c-c05c3dcfc149?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=d97b18a05284491d4917e4397d6bfa70b47d75bfcd9742c3a44a27b195ffd6e4&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/back-bling/triceratops-coin-a6f7127f?lang=es-ES",
-          "type": "Accesorio mochilero"
+          "type": "Accesorio mochilero",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Lanza de poder",
@@ -680,7 +784,9 @@
             "https://ucs-images.fortnite.com/blobs/b6/a1/fe02-a974-4ef2-aa83-4057ed487bd8?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=04d90094a80b466587663d9634d6362256957faf9568ee62a5e5f290ed88faab&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/power-lance-24a211d6?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "A METAMORFOSEARSE",
@@ -696,7 +802,9 @@
             "https://ucs-images.fortnite.com/blobs/f7/cb/f4de-c4b9-4663-85ae-7d2c686a4c7e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=e773ae77c1fdcebffccba073fb7c78e3f705de118cbdeb2654318002b6f9c8f2&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/its-morphin-time-c90d42ee?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Ranger rojo",
@@ -712,7 +820,9 @@
             "https://ucs-images.fortnite.com/blobs/61/7f/c2f6-b0ce-43d1-94d0-8ff51b25bdc7?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=b3f1398937ba631ab44822d28e3acd9b607babfa71006bd76494df4fa11c03b7&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/red-ranger-ca69de89?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Moneda de tiranosaurio",
@@ -731,7 +841,9 @@
             "https://ucs-images.fortnite.com/blobs/dc/a3/9ee1-d909-4d10-9e65-66b8d1bfbfcc?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=5d9904dc3831cbf7b19a9be213d03d34f47cb1ba92b65e3fb02f69a977f2ca41&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/back-bling/tyrannosaurus-coin-aa906268?lang=es-ES",
-          "type": "Accesorio mochilero"
+          "type": "Accesorio mochilero",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Espada de poder",
@@ -747,7 +859,9 @@
             "https://ucs-images.fortnite.com/blobs/34/fb/1b74-7be4-447c-b071-6d61d2131ff7?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=9d8a6154cc08ec7c7a541bec553922d6f585df4bcbd6c07615f2b24e833397ca&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/power-sword-bdc19ca6?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "¡VAMOS, POWER RANGERS!",
@@ -763,7 +877,9 @@
             "https://ucs-images.fortnite.com/blobs/a8/51/373f-2f83-43c5-a000-207a6398c0f4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=2a8db6d664e953aaff06d7f97592dc96d0fe35b8828710cf75b9dfb00b2b7192&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/go-go-power-rangers-0d387f5c?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Ranger negro",
@@ -779,7 +895,9 @@
             "https://ucs-images.fortnite.com/blobs/45/99/f0cb-2776-4aa8-a04d-0e080e82b41b?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=fe2fd1779e00943beb3cf53e7965465b066bb638fdc392024bf91273ffdacb68&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/black-ranger-41b79ee6?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Moneda de mamut",
@@ -798,7 +916,9 @@
             "https://ucs-images.fortnite.com/blobs/0c/09/ca98-5027-48de-8fd1-2ab05ad6c034?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=65e99445b9345b73cda420f441a8d19f1b97d855cc632e9a35031dd804b0c3b6&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/back-bling/mastodon-coin-1fb7fd10?lang=es-ES",
-          "type": "Accesorio mochilero"
+          "type": "Accesorio mochilero",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Hacha de poder",
@@ -814,7 +934,9 @@
             "https://ucs-images.fortnite.com/blobs/35/e1/56eb-f195-4692-9705-c21807e82f75?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=1b87e62c1ec99433698786cc1e0f57b65406fd155454035950d4c47d2d26a20d&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/power-axe-fbb67ff1?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Mensaje de Zordon",
@@ -830,7 +952,9 @@
             "https://ucs-images.fortnite.com/blobs/38/0e/7180-33ab-4867-b1d5-8dbd6579132a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=2db300245f60431101218a0c9b9e730ac0506bc562ce937c78800033c709a0bf&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/zordons-message-f8ef0fc0?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Ranger amarilla",
@@ -846,7 +970,9 @@
             "https://ucs-images.fortnite.com/blobs/10/e9/ecaf-f041-4138-8766-ca5b56335b20?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=12b5c8c669d7c731812bcfca184d7035fc1f8b7e527e2fdfe49563fd0ec21dde&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/yellow-ranger-db63c435?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Moneda de smilodon",
@@ -865,7 +991,9 @@
             "https://ucs-images.fortnite.com/blobs/8c/cf/9484-b943-4c3a-bd41-12e8526887eb?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=f0543ebdf9b92d57fa71ff65b16bb0c3d260bd2ebd5757af136cfe55dfff2ad9&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/back-bling/sabertooth-tiger-coin-e8afcf8a?lang=es-ES",
-          "type": "Accesorio mochilero"
+          "type": "Accesorio mochilero",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Dagas de poder",
@@ -881,7 +1009,9 @@
             "https://ucs-images.fortnite.com/blobs/a0/6f/7f60-1ff1-49dd-a264-9dc6931dba42?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=0343ce2c47c31468c1b22fb49d021a7acf600fe94f77a324253046eefc43e121&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/power-daggers-8b70578a?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Baile incontrolable",
@@ -897,7 +1027,9 @@
             "https://ucs-images.fortnite.com/blobs/ec/e3/0a71-aaa6-4c34-b146-052e9869205d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=5785fece854edfeb0ee807d36d916eaa285d524d40f640588d16f92963326ce2&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/uncontrollable-dance-5c9fb72e?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Ranger rosa",
@@ -913,7 +1045,9 @@
             "https://ucs-images.fortnite.com/blobs/5f/1f/e696-11e9-4550-8dcc-6b552ce1a074?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=7f5841ed2e3fa7a80039c4d7118f9b3ffcd71d1cb07b1799af207ce8b52f1084&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/pink-ranger-d7079649?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Moneda de pterodáctilo",
@@ -932,7 +1066,9 @@
             "https://ucs-images.fortnite.com/blobs/a9/76/48bf-daad-4e49-82bc-b7115d489b94?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=5430e4d426da05761c9c21b2d278fb8ecacb766f11a3102e3076f7f4144753f5&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/back-bling/pterodactyl-coin-702c3db1?lang=es-ES",
-          "type": "Accesorio mochilero"
+          "type": "Accesorio mochilero",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Arco de poder",
@@ -948,7 +1084,9 @@
             "https://ucs-images.fortnite.com/blobs/7e/8d/815a-f488-47ac-aead-0e1dccac8704?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=fd56a6cb7e4b55f25593d50f8d3ae07e17a015fb25e3bd3a5c391511e77de79a&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/power-bow-1bfa14ec?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Power Rangers",
@@ -964,7 +1102,9 @@
             "https://ucs-images.fortnite.com/blobs/6d/55/5894-d2f2-4faa-94f9-e82a55dcddb4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=8708994c3ef8d12eb7832e19546494f31d5bb7abab0e58500bd05126a916bb29&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/wraps/power-rangers-04858801?lang=es-ES",
-          "type": "Envoltorio"
+          "type": "Envoltorio",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Go Go Power Rangers",
@@ -978,7 +1118,9 @@
             "https://cdn2.unrealengine.com/cp0azjhqjzxrw2qn-2460x2460-3460215c9e39.jpg"
           ],
           "url": "https://www.fortnite.com/item-shop/jam-tracks/go-go-power-rangers-7507a728c575?lang=es-ES",
-          "type": "Pista de improvisación"
+          "type": "Pista de improvisación",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Lote de BMW E30 + Power Rangers",
@@ -994,7 +1136,9 @@
             "https://ucs-images.fortnite.com/blobs/4e/96/2fef-29eb-4f59-8b99-f72bc9d78b3b?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=433e0b980a0795bc160ee860f24575168beeadae0a0529177bd2de84dfcac2f4&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x200.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/bmw-e30-power-rangers-bundle-9ba116da?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         },
         {
           "name": "Power Rangers",
@@ -1010,7 +1154,9 @@
             "https://ucs-images.fortnite.com/blobs/1c/4c/4d66-4952-42d1-b90e-91a84a3d617f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=7b79e9806225f675330cc9ec4d4eef17cc455b4bea0ea5744523e557abf66ec8&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/wheels/power-rangers-97df5dc4?lang=es-ES",
-          "type": "Ruedas"
+          "type": "Ruedas",
+          "color1": "#A853D3",
+          "color2": "#7A1BC7"
         }
       ]
     },
@@ -1036,7 +1182,10 @@
             "https://ucs-images.fortnite.com/blobs/12/64/50f7-2567-427a-a2ec-448944407377?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=f7c1f34a01e3d419d47780d98207dddaa04fc7c4a1cf543963d99216c017ea4c&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/all-might-bundle-6f4124b7?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Lote de la Clase 1-A",
@@ -1057,7 +1206,10 @@
             "https://ucs-images.fortnite.com/blobs/e3/bb/d735-f996-44c1-ba6d-2dc9f9a696db?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=2a040f4f77ba5329a943d7579520fefbdd340f4c8315286b47c193119d93d9b5&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/class-1a-bundle-62150b47?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "All Might",
@@ -1076,7 +1228,10 @@
             "https://ucs-images.fortnite.com/blobs/2f/4a/54fd-364f-4a67-b128-e8449d6009c0?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=d2d8dc2ca24bbcf214fef93e92e7a3c75def16a10a220f2ca9eed25475bf65b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/all-might-ebc21363?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Izuku Midoriya",
@@ -1095,7 +1250,10 @@
             "https://ucs-images.fortnite.com/blobs/20/0b/8369-ceee-4bf0-ad1d-89d2fb9b07ef?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=87594820d461ab06052eda8a30623644feac120f02d5f516293e64fd7e19d436&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/izuku-midoriya-ff1b5fd1?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Ochaco Uraraka",
@@ -1111,7 +1269,10 @@
             "https://ucs-images.fortnite.com/blobs/75/9c/efa5-06b9-4464-a73c-aa62006e537c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=157ed5b3b7524e0c53f87a901046b38bf750e0e233f62261826ef81e8fc72428&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/ochaco-uraraka-3e6f4084?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Katsuki Bakugo",
@@ -1130,7 +1291,10 @@
             "https://ucs-images.fortnite.com/blobs/31/5e/c2ee-fe5f-4acc-9237-551bb5432478?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=50394fc4d722f8bc5921760084fcc335d43a39205672cee59ab249d8c14dcd80&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/katsuki-bakugo-8d89b050?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Símbolo de la paz",
@@ -1146,7 +1310,10 @@
             "https://ucs-images.fortnite.com/blobs/57/56/fbb6-c4ea-44d1-b270-4361bdf8509e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=ce3733e8a480e1db243251387dae8ce7adaa6a360aed793517fb1918ee876387&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/symbol-of-peace-5c91c4e0?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Lote de equipamiento de la Clase 1-A",
@@ -1164,7 +1331,10 @@
             "https://ucs-images.fortnite.com/blobs/d8/9e/495b-3468-4101-86ad-ba91ede24606?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=64e2d3a812b16469d57aaaa3ff15bf0c5225d45c9987981bff4140cc3d972178&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/class-1a-gear-bundle-47b76a45?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Apuntes de héroes",
@@ -1180,7 +1350,10 @@
             "https://ucs-images.fortnite.com/blobs/a1/f0/71bb-1496-4427-962b-84df2c0d3d7a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=ae63200e1540beb5df8adef8c7dd8acd0c465e0eb0efbe16eca254419ffa10b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/hero-analysis-2a04582d?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Hacha de Látigo negro",
@@ -1196,7 +1369,10 @@
             "https://ucs-images.fortnite.com/blobs/b4/76/d30c-2e12-435d-b74a-f07429888815?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=0411855efebe6c9c3dd8b53afd13c8042c909b030db180ed350972c3ca9c6ddd&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/blackwhip-axe-d22a7ad1?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Martillo de Uravity",
@@ -1212,7 +1388,10 @@
             "https://ucs-images.fortnite.com/blobs/e7/62/4cf0-a573-4043-99c0-a80890904e92?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=4e56ee8a5263e608058f0479c4b8c070fcd524b15f02c840fa0884fc22aac7f3&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/uravity-smasher-d723f01a?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Mazo explosivo",
@@ -1228,7 +1407,10 @@
             "https://ucs-images.fortnite.com/blobs/48/10/36aa-fcf8-4978-8948-e930e712d3b2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=d2411109166bfee9d4a26ab030fc154521454aefc9ce635e021140dd9b34a206&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/cluster-buster-36bf9c0c?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Justiciera de All Might",
@@ -1244,7 +1426,10 @@
             "https://ucs-images.fortnite.com/blobs/5e/0e/fd36-02ba-457e-a985-0359b45541b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=0e6786093827b89d0d0cf2ee46e91fb440a1c9b08a26cc7fca0ef22aac0acc1f&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/all-smite-a8bb9c2f?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Lote de Shoto Todoroki",
@@ -1265,7 +1450,10 @@
             "https://ucs-images.fortnite.com/blobs/6a/f4/c91d-0a7c-44d0-95cf-61be3b2aecd9?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=67b9c17e6bb62644654e90c247030dcbcd2c275ce8ab9a285709570915ffcba7&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/shoto-todoroki-bundle-0a40897b?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Shoto Todoroki",
@@ -1284,7 +1472,10 @@
             "https://ucs-images.fortnite.com/blobs/c8/75/4f57-5c9e-4c19-aba2-106c44ef7029?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=d49c7ff99810180b1823fcec4bbe477c332cf86e8e1600c380139a7213a82a4a&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/shoto-todoroki-f690d03b?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Planeador pirogélido",
@@ -1300,7 +1491,10 @@
             "https://ucs-images.fortnite.com/blobs/90/5d/f01d-3c51-4ab8-ba2a-8572e9adc295?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=0009866bb9dd489e58703493520ccb3b00bdcd8b24e26fa67c913e0ce6d4fb73&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/gliders/coldburn-flier-9628de5d?lang=es-ES",
-          "type": "Ala delta"
+          "type": "Ala delta",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Uniforme de la UA",
@@ -1316,7 +1510,10 @@
             "https://ucs-images.fortnite.com/blobs/98/50/c60f-b486-44a5-bb1b-89363fcdba29?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=05f4501dce09395f4821bf626eb5adf4426c89db72905cc08466964b06a1eb8f&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/wraps/ua-uniform-98709f82?lang=es-ES",
-          "type": "Envoltorio"
+          "type": "Envoltorio",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Eijiro Kirishima",
@@ -1335,7 +1532,10 @@
             "https://ucs-images.fortnite.com/blobs/32/89/2007-2c95-4642-a860-c97dbf21ce90?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=dd1e3dce032cf67e26679d6e4fe541e7ca5188f8996acf745686d3a3b381a346&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/eijiro-kirishima-b63c40dd?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Mina Ashido",
@@ -1354,7 +1554,10 @@
             "https://ucs-images.fortnite.com/blobs/56/57/efcf-55e8-4985-a86e-26327b56b1a9?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=0c17a0e0f35719f025b4ce5f1f74ee3b27f3f13201dc282a2f00a98f0a12e80b&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/mina-ashido-27d71397?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Baile del Festival Cultural",
@@ -1370,7 +1573,10 @@
             "https://ucs-images.fortnite.com/blobs/1a/1f/f512-069b-4951-bbf5-4f4fd5d58b28?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=b305792a1150eb25a6fcb848bc8ce492d864569dc65f04cae6ce3a1660556176&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/culture-festival-dance-a07d61c0?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Hojas pirogélidas",
@@ -1386,7 +1592,10 @@
             "https://ucs-images.fortnite.com/blobs/0f/65/0a68-f6f4-4a8e-b122-c9968754f65f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=4f8b25c8e93d88a128a7f52dbe4a41a79bb802c950ccebe4efb37f162319b85a&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/coldhot-hitters-69af89d8?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Lote de Liga de Villanos",
@@ -1407,7 +1616,10 @@
             "https://ucs-images.fortnite.com/blobs/d8/f5/0f6d-5451-4640-a84d-a2232bb6a932?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=5580161c6098c6c3594a721f85baac151f9a2ee3071dfae6ab921c5a1daa6e79&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/league-of-villains-bundle-865341ce?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Pack de Himiko Toga",
@@ -1426,7 +1638,10 @@
             "https://ucs-images.fortnite.com/blobs/8a/4b/7669-795e-4c83-8ad8-82de6ba7c90e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=6e7c07cd18afa300aa815c69336e8cfcbcc1357ea3fb3de04dd834bf11639f45&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/himiko-toga-pack-d31d93a2?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Pack de Tomura Shigaraki",
@@ -1445,7 +1660,10 @@
             "https://ucs-images.fortnite.com/blobs/bd/3e/2cb8-df6e-4ed8-a68f-77c1d52fe621?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=f1d6df2e6e0884d3e822facd76166fc63d70a329ab65c88923cb17c944b837c9&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/tomura-shigaraki-pack-f42ea744?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         },
         {
           "name": "Pack de Dabi",
@@ -1462,7 +1680,10 @@
             "https://ucs-images.fortnite.com/blobs/37/e7/95cc-0679-4969-b73a-8f33295adea3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=2f703dd42d633e704d549d87eac221ade7970f8df749000334a2147363fa37a2&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/dabi-pack-e07d097d?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#1abba9",
+          "color2": "#107165",
+          "color3": "#052623"
         }
       ]
     },
@@ -1483,7 +1704,10 @@
             "https://ucs-images.fortnite.com/blobs/13/89/0653-038f-4a64-91c9-c886fcd0a023?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=f1202cc0e70228bb4311c16828a8650ea8aa84279ab995fac222491e6705fb88&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/7ball-44be6a3f?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Rombos rematadores",
@@ -1499,7 +1723,10 @@
             "https://ucs-images.fortnite.com/blobs/31/7e/06a5-7817-4703-814b-766b50671598?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=c2b9a3f4ca8066bed457e0da991249471ac0b7dd2c778fa1bfb322b243a503c5&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/rack-smashers-c402feac?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Nash Nori",
@@ -1518,7 +1745,10 @@
             "https://ucs-images.fortnite.com/blobs/5e/c6/cc12-2187-4d90-9097-695c633d5ee7?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=ffa9326a3927563a436b4d6d01cadd32b74c76409e3f6130e08b11b3039925ca&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/nash-nori-7583aca3?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Renard",
@@ -1534,7 +1764,10 @@
             "https://ucs-images.fortnite.com/blobs/37/40/11ab-08f0-495f-99ff-3157b4c88b4a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=170ad1bd8842feedac745a5a0e11a0b0f770d746336ca31f84a1bffc75c6ebc1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/renard-f0d54ec7?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Lapin",
@@ -1550,7 +1783,10 @@
             "https://ucs-images.fortnite.com/blobs/fa/62/2ec2-02d9-405a-a761-1b7f36596724?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=d2ba90f413629d84c1d23f575bebe253cd095b17a379b935a6d710ec047deb51&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/lapin-07f2c8ab?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Lunelle",
@@ -1569,7 +1805,10 @@
             "https://ucs-images.fortnite.com/blobs/4d/57/df72-e711-40ef-aeb0-b9f12fa82312?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=725a8419f55a0e4318ad4ceaf407b542b1f4a7514040ad9d450c3ec761046b37&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/lunelle-3ee67c69?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Bahía",
@@ -1588,7 +1827,10 @@
             "https://ucs-images.fortnite.com/blobs/6f/79/64cb-14d3-42e3-9a84-e4a6a93808c0?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=2ebc380bc25b066e398239f27b1461d4d911ff4cf938504d14fc4685eff69444&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/bay-cb9206f5?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Agente de Scorpius",
@@ -1607,7 +1849,10 @@
             "https://ucs-images.fortnite.com/blobs/a3/d9/9248-2f46-4b9f-b894-c2ad6b69ef3b?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=2c5ba9732c2ad49598726f38075bfec247e1b6fba6814293ba1993b8ea5bf33e&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/scorpius-agent-e8c89f2a?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Espía de Scorpius",
@@ -1626,7 +1871,10 @@
             "https://ucs-images.fortnite.com/blobs/96/61/b1e3-11cd-40b0-b32e-4030e99dac38?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=0779a0db4f021fc44b24c30d141f0b545746dd92e6767056611ec3d9614c1ebb&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/scorpius-operative-3c16a0bc?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Lote de Down With The Sickness",
@@ -1644,7 +1892,10 @@
             "https://ucs-images.fortnite.com/blobs/26/4c/ff23-64be-435f-ad49-f2475a9bb8b4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=351c43cb3436f5bd2bbf4fd69e9a41c16f85fd3e2aa0e3cbd0a475e544481956&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/down-with-the-sickness-bundle-d89cee5e?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Down with the Sickness",
@@ -1658,7 +1909,10 @@
             "https://cdn2.unrealengine.com/r185natclok4bf1e-512x512-281ee83cd3d0.jpg"
           ],
           "url": "https://www.fortnite.com/item-shop/jam-tracks/down-with-the-sickness-d2dafffaf752?lang=es-ES",
-          "type": "Pista de improvisación"
+          "type": "Pista de improvisación",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Plaga",
@@ -1674,7 +1928,10 @@
             "https://ucs-images.fortnite.com/blobs/5a/b3/4334-a33c-4b57-bddd-aba70311a814?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=4f98b870d6cd6dd7a4592a0e2abd691fa8067b25456af6efd25687275569a7d3&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/plague-056f63d5?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Sión",
@@ -1690,7 +1947,10 @@
             "https://ucs-images.fortnite.com/blobs/f6/7f/71be-5b94-4996-af92-b97309b0b6c9?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=577ba07046cad3c8b3a1225ee9470c9789aff9c72c2b156274bbb6cb212d25be&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/psion-36d9d0dc?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Aerohacha",
@@ -1706,7 +1966,10 @@
             "https://ucs-images.fortnite.com/blobs/76/e3/f04d-f400-46de-9f85-a8dcc3ef4b97?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=f434b631120f382af5a6072fa50ebcfa5cf736611a7a292cfe64bb6f48d4d989&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/aero-axe-d4792ee9?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Hacha anárquica",
@@ -1722,7 +1985,10 @@
             "https://ucs-images.fortnite.com/blobs/db/f0/6d85-668d-419f-b250-39de5f20f701?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=f3f558b578e8b7de9f9db0932290e44b355828a64a19b7221d441c945fc6a8a9&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/anarchy-axe-f4916299?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Dirigible brillante",
@@ -1738,7 +2004,10 @@
             "https://ucs-images.fortnite.com/blobs/df/f2/8bf7-5639-4b69-a816-21c5b412193b?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=ae501c03153f4c415cadb1e75c81f36204dee0a7eb5e52c106893e3b77818772&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/gliders/brite-blimp-075fc324?lang=es-ES",
-          "type": "Ala delta"
+          "type": "Ala delta",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Endriago estuoso",
@@ -1754,7 +2023,10 @@
             "https://ucs-images.fortnite.com/blobs/10/b0/0c46-a064-48c7-abfb-43b7553728bf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=9bd1930c46eddd4abe39bb579e580b37344ddb8c0455f737a7e26b80d589673d&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/gliders/burning-beast-827b2950?lang=es-ES",
-          "type": "Ala delta"
+          "type": "Ala delta",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Rastreador",
@@ -1770,7 +2042,10 @@
             "https://ucs-images.fortnite.com/blobs/d8/de/95a7-ae0b-42ff-864d-92e975cb7b05?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=7ae07f32157a618977858c15aafa1918b038a349c4520c4a55af122fa23df2fa&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/tracker-d4bbcb06?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Astrea",
@@ -1786,7 +2061,10 @@
             "https://ucs-images.fortnite.com/blobs/ad/20/9d7c-70d1-4bf9-8f1d-39dded709c4e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=69cf069f1d3f2564cc4c1da336c9d67f2f97bdc94d58887ee8b58c4b3d2188de&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/dazzle-94031e66?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Mente maestra",
@@ -1805,7 +2083,10 @@
             "https://ucs-images.fortnite.com/blobs/3a/cc/e010-e99d-4715-9ef6-652c681e1fbc?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=5a4325d9bbbcb7523565eda347a8ab85024dae844dba17dfc3ddbe78fa41968a&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/brainstorm-bc13432c?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Rebote lunar",
@@ -1821,7 +2102,10 @@
             "https://ucs-images.fortnite.com/blobs/66/5b/f4a0-45b2-4316-95a3-a6857cda856e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=a745999350e9f23d4f52615c823909bcf79ec56af4b6b4b6b4af77cfc5917b57&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/moon-bounce-5506e48e?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Acero agrario",
@@ -1837,7 +2121,10 @@
             "https://ucs-images.fortnite.com/blobs/a7/51/2332-2100-4508-a5a8-b877c208c911?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=640faf3398ce884c292b4428eac90132ea5e48fe1b1b79185f6c1cd4f83bd93c&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/farmer-steel-6cf52791?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Conductor agresivo",
@@ -1853,7 +2140,10 @@
             "https://ucs-images.fortnite.com/blobs/ed/d1/2f12-1bb2-4685-8fa9-0b1823e1a1a9?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=384015796d8364186b79e15bda6a3bbed4e28b253102501f1574f6908a469913&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/hard-charger-937a7817?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Silencio",
@@ -1872,7 +2162,10 @@
             "https://ucs-images.fortnite.com/blobs/20/3a/885a-9be6-4597-a611-78e4d0a1c440?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=a87db427199cbbf47ef37595f63a63320aabe80925c52152bf3c2f0375d95084&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/hush-5d13cac1?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         }
       ]
     },
@@ -1891,7 +2184,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/bundles/guardians-of-the-globe-bundle-74e8b581?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Invencible",
@@ -1903,7 +2199,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/outfits/invincible-dc3ae659?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Atom Eve",
@@ -1915,7 +2214,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/outfits/atom-eve-ea42694b?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Bola rapidísima",
@@ -1927,7 +2229,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/emotes/fastest-fastball-e93c364a?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Brazo de Reanimen",
@@ -1939,7 +2244,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/pickaxes/reaniman-arm-63e08cf5?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Sables subatómicos",
@@ -1951,7 +2259,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/pickaxes/subatomic-swords-db3e0755?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Icónicamente Invencible",
@@ -1963,7 +2274,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/wraps/iconically-invincible-d3d2f22a?lang=es-ES",
-          "type": "Envoltorio"
+          "type": "Envoltorio",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Maza de War Woman",
@@ -1975,7 +2289,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/pickaxes/war-womans-mace-fbad6314?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Azul invencible",
@@ -1987,7 +2304,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/wraps/invincible-blue-e96380d7?lang=es-ES",
-          "type": "Envoltorio"
+          "type": "Envoltorio",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Guitarra de Invencible",
@@ -1999,7 +2319,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/guitars/invincible-shredder-3c21ecfc?lang=es-ES",
-          "type": "Guitarra"
+          "type": "Guitarra",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Bajo de Omni-Man",
@@ -2011,7 +2334,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/bass/omniman-bass-14eb4fcf?lang=es-ES",
-          "type": "Bajo"
+          "type": "Bajo",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Dupli-Kate",
@@ -2023,7 +2349,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/outfits/duplikate-232ef6bb?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Shrinking Rae",
@@ -2035,7 +2364,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/back-bling/shrinking-rae-6ad538a3?lang=es-ES",
-          "type": "Accesorio mochilero"
+          "type": "Accesorio mochilero",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Duplí-kate",
@@ -2047,7 +2379,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/emotes/duplikates-cd90705f?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Bastones dobles",
@@ -2059,7 +2394,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/pickaxes/duplicating-batons-c3d8a0ca?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Duplikación",
@@ -2071,7 +2409,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/wraps/duplikation-f3ca072e?lang=es-ES",
-          "type": "Envoltorio"
+          "type": "Envoltorio",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Lote de Allen el alien",
@@ -2085,7 +2426,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/bundles/allen-the-alien-bundle-d08edb4f?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Allen el alien",
@@ -2097,7 +2441,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/outfits/allen-the-alien-917886a2?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Rastreador de Allen",
@@ -2109,7 +2456,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/back-bling/allens-tracking-device-744f9cc5?lang=es-ES",
-          "type": "Accesorio mochilero"
+          "type": "Accesorio mochilero",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Hacha de la Coalición",
@@ -2121,7 +2471,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/pickaxes/cop-axe-16514f7c?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Aperitivo de Allen",
@@ -2133,7 +2486,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/emotes/allens-snack-dcd0ab67?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Lote de equipamiento de Guardianes de la Tierra",
@@ -2147,7 +2503,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/bundles/guardians-of-the-globe-gear-bundle-7a293c47?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Lote de Tygris + Invencible",
@@ -2163,7 +2522,10 @@
             "https://ucs-images.fortnite.com/blobs/54/36/5ad5-5584-426b-a1c7-3f08eda2570b?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=7d83e032eb721d9fc9b2199af85bcf34d3361b9e10b13641fe4b083ea3b12b91&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/tygris-invincible-bundle-64e1564f?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         }
       ]
     },
@@ -2418,7 +2780,9 @@
             "https://ucs-images.fortnite.com/blobs/61/d1/e002-67c6-4196-aaea-58526d44c4f3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=5c24bd021cf86efb77f9f79db28389eeafecfe3706f99a3fc728d2cdfadf0f01&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/noodle-2d-bundle-8174f949?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#bcaf95",
+          "color2": "#c55434"
         },
         {
           "name": "2D",
@@ -2437,7 +2801,9 @@
             "https://ucs-images.fortnite.com/blobs/a0/8d/021f-69ee-4bfb-a0e6-23fe24f871ed?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=552c6b58a67a74161d3ccead3b8bccd74a01142ad0aec373ddcccad972156537&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/2d-accaf982?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#bcaf95",
+          "color2": "#c55434"
         },
         {
           "name": "Noodle",
@@ -2456,7 +2822,9 @@
             "https://ucs-images.fortnite.com/blobs/fd/09/4e86-378a-41f3-9282-33b117cfba9c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=cd8a2dc53152dc0f69d06d07b6ddc5a068f6c527afa3d54b2fc035bc4be7a922&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/noodle-39ef97a3?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#bcaf95",
+          "color2": "#c55434"
         },
         {
           "name": "Funda de Noodle",
@@ -2472,7 +2840,9 @@
             "https://ucs-images.fortnite.com/blobs/bc/f8/f946-f8f7-4df3-9764-10eb4de91e7f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=d016157aa5c60e7c8c0d7bd792cf96f4d81d9d5b6acfba59a34f62f86d65848e&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/back-bling/noodles-case-75ca7de1?lang=es-ES",
-          "type": "Accesorio mochilero"
+          "type": "Accesorio mochilero",
+          "color1": "#bcaf95",
+          "color2": "#c55434"
         },
         {
           "name": "Megáfono de 2D",
@@ -2488,7 +2858,9 @@
             "https://ucs-images.fortnite.com/blobs/7c/a6/cc9e-2a66-4b43-b294-24ed94acbdad?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=e8e0b914c779bc7b0211b8307f37e72bc0d69d36933f0c004ddd2279adb3cf00&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/back-bling/2ds-megaphone-629ea577?lang=es-ES",
-          "type": "Accesorio mochilero"
+          "type": "Accesorio mochilero",
+          "color1": "#bcaf95",
+          "color2": "#c55434"
         },
         {
           "name": "Melodía de 2D",
@@ -2507,7 +2879,9 @@
             "https://ucs-images.fortnite.com/blobs/ef/69/4135-8e80-4ec7-801d-4b6159d5f52e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=bd49ec3efaec4398ef1987dbc8eb19e497123c39011a3ab47fd050f87f3410d1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/microphones/2ds-mic-89face41?lang=es-ES",
-          "type": "Micrófono"
+          "type": "Micrófono",
+          "color1": "#bcaf95",
+          "color2": "#c55434"
         },
         {
           "name": "Globos de Bonesy",
@@ -2523,7 +2897,9 @@
             "https://ucs-images.fortnite.com/blobs/21/8a/0f1f-74dc-426d-bd3e-61c9f78bf571?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=45a97d6b1a8c6b46afa4c3e59a3a1ee34588893d7d737e5b3ddd3200094b33bb&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/contrails/bonesy-balloons-c81cb503?lang=es-ES",
-          "type": "Estela"
+          "type": "Estela",
+          "color1": "#bcaf95",
+          "color2": "#c55434"
         },
         {
           "name": "Camuflaje de Gorillaz",
@@ -2539,7 +2915,9 @@
             "https://ucs-images.fortnite.com/blobs/ed/17/ab8d-edef-4640-a2d3-499f48d3cc37?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=c0aa09169e76640f86b8a8d8ffc421c92966b6da6d2cd009f68b0223fb7cc925&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/wraps/gorillaz-camo-e9e74980?lang=es-ES",
-          "type": "Envoltorio"
+          "type": "Envoltorio",
+          "color1": "#bcaf95",
+          "color2": "#c55434"
         },
         {
           "name": "DARE",
@@ -2555,7 +2933,9 @@
             "https://ucs-images.fortnite.com/blobs/19/62/aa8b-4285-4611-967d-a91ed010a33e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=cab3e00d9200eeb5d47c67f2010a00885ab8de9e08ed04786ad21176e117e931&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/dare-398e75c3?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#bcaf95",
+          "color2": "#c55434"
         },
         {
           "name": "Armonía de Noodle",
@@ -2571,7 +2951,9 @@
             "https://ucs-images.fortnite.com/blobs/9b/8a/a725-823c-4650-9130-0202421000c8?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=71a782a8ac0b89d719cfaadaf64675884ef7c29b9e0523a5c120dbe797177569&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/guitars/noodles-axe-6bcc1a85?lang=es-ES",
-          "type": "Guitarra"
+          "type": "Guitarra",
+          "color1": "#bcaf95",
+          "color2": "#c55434"
         },
         {
           "name": "DARE",
@@ -2599,7 +2981,9 @@
             "https://cdn2.unrealengine.com/ag5hejwpro7pzbby-512x512-b346cdceaec2.jpg"
           ],
           "url": "https://www.fortnite.com/item-shop/jam-tracks/feel-good-inc-6407d06a2974?lang=es-ES",
-          "type": "Pista de improvisación"
+          "type": "Pista de improvisación",
+          "color1": "#bcaf95",
+          "color2": "#c55434"
         },
         {
           "name": "Clint Eastwood",
@@ -2613,7 +2997,9 @@
             "https://cdn2.unrealengine.com/7ijrglxl6luccxcr-512x512-843d5a7f4acf.jpg"
           ],
           "url": "https://www.fortnite.com/item-shop/jam-tracks/clint-eastwood-2ec37abf1582?lang=es-ES",
-          "type": "Pista de improvisación"
+          "type": "Pista de improvisación",
+          "color1": "#bcaf95",
+          "color2": "#c55434"
         }
       ]
     },
@@ -2639,7 +3025,9 @@
             "https://ucs-images.fortnite.com/blobs/df/33/1484-9355-484b-94ca-c3cf799b2ad2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=c83dd87f691189f80dea48a70b14227a6f1cd7f7357e0c5cacfef001181fc63d&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/evie-x-bundle-51deb00a?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#F3D45B",
+          "color2": "#EB2D7E"
         },
         {
           "name": "Evie X",
@@ -2658,7 +3046,9 @@
             "https://ucs-images.fortnite.com/blobs/ee/78/aa25-e169-4855-a8ec-0fbd5e1ef79d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=aa88c5fb25cf3bd6103063ceb25566e92d2a5e072bb2fe96231ea58193b54533&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/evie-x-74731f74?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#F3D45B",
+          "color2": "#EB2D7E"
         },
         {
           "name": "Pistolas exterminadoras",
@@ -2674,7 +3064,9 @@
             "https://ucs-images.fortnite.com/blobs/e4/ca/1674-5503-4e4d-9c48-8f0abf1eb688?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=18290a056f36024da45cf2b510194ff346de8949d490340dfa9b000ba7d0f581&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/back-bling/xs-crossfire-0cfb8af5?lang=es-ES",
-          "type": "Accesorio mochilero"
+          "type": "Accesorio mochilero",
+          "color1": "#F3D45B",
+          "color2": "#EB2D7E"
         },
         {
           "name": "Antidisturbios de Evie",
@@ -2690,7 +3082,9 @@
             "https://ucs-images.fortnite.com/blobs/fd/9b/6889-0cb5-4f2c-88e9-387b941741f2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=bd51d1e83c73aa4a1d8fe9b2032dfdb1bc67de3a59b31f638e473246107e3993&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/x-baton-38625b88?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#F3D45B",
+          "color2": "#EB2D7E"
         },
         {
           "name": "Sindicador X",
@@ -2706,7 +3100,9 @@
             "https://ucs-images.fortnite.com/blobs/0a/ec/a1e3-7c9d-4d8c-bef5-42cb02aae5e2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=1ffacc748b4182c1ce18947ffabe1473801012b390e482e882da3a0b7d0ca343&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/wraps/syndicator-x-1028b0b6?lang=es-ES",
-          "type": "Envoltorio"
+          "type": "Envoltorio",
+          "color1": "#F3D45B",
+          "color2": "#EB2D7E"
         },
         {
           "name": "Sindicadores",
@@ -2722,7 +3118,9 @@
             "https://ucs-images.fortnite.com/blobs/b0/30/f06a-dae6-42de-a7d9-2c5681b2abfa?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=2a71aad57bb1d33b7eb1d89ce0e9250c94f405f2f6b6fd7172089bc61e3eb48d&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/kicks/syndicators-5541d073?lang=es-ES",
-          "type": "Calzado"
+          "type": "Calzado",
+          "color1": "#F3D45B",
+          "color2": "#EB2D7E"
         },
         {
           "name": "Lote de Gelatino",
@@ -2743,7 +3141,9 @@
             "https://ucs-images.fortnite.com/blobs/d2/29/8d7e-87df-4279-adc4-9c788fb1e86f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=8bce68862d8af603bdc6eb1723d77f76efa8d1e961b2a5392e9e5f39f6e7aa20&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/jellie-bundle-575a16ad?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#F3D45B",
+          "color2": "#EB2D7E"
         },
         {
           "name": "Gelatino",
@@ -2762,7 +3162,9 @@
             "https://ucs-images.fortnite.com/blobs/11/d2/e1bc-e097-440b-9838-20fdc8f6c721?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=0d929f9d26a36abb35a37928dd3e016cea6778113c7622e9e110867b5a0a8656&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/jellie-9a44caf2?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#F3D45B",
+          "color2": "#EB2D7E"
         },
         {
           "name": "Aguamala",
@@ -2778,7 +3180,9 @@
             "https://ucs-images.fortnite.com/blobs/52/77/21a8-4e60-4ac6-9097-b2c18640b51f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=a05b1581c72aee53fa66f47cee703598815e174e05891e3c2c819ca576308787&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/gliders/man-o-war-0d8e9233?lang=es-ES",
-          "type": "Ala delta"
+          "type": "Ala delta",
+          "color1": "#F3D45B",
+          "color2": "#EB2D7E"
         },
         {
           "name": "Scampi",
@@ -2794,7 +3198,9 @@
             "https://ucs-images.fortnite.com/blobs/bb/af/c065-4d2c-45f4-a3c9-d5bba9176cd8?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=c42ae5442a7fb6698cd22d4fe712d47890065584f1b4728ca7173b3e79dedb54&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/scampi-558b7ae6?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#F3D45B",
+          "color2": "#EB2D7E"
         },
         {
           "name": "Espectro de salpicadura",
@@ -2810,7 +3216,9 @@
             "https://ucs-images.fortnite.com/blobs/25/25/f72e-72f9-4f95-9c38-f116da8b00db?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=c77f9519e11e9ce2ecad5d098c8dd02076df0c4df01b07dd2b0047d8a322f92b&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/wraps/splatter-spectrum-8a715bda?lang=es-ES",
-          "type": "Envoltorio"
+          "type": "Envoltorio",
+          "color1": "#F3D45B",
+          "color2": "#EB2D7E"
         }
       ]
     },
@@ -2827,7 +3235,9 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/bundles/porsche-918-spyder-sonic-the-hedgehog-87297934?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#cb2036",
+          "color2": "#640015"
         },
         {
           "name": "Invulnerabilidad de Sonic",
@@ -2839,7 +3249,9 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/boosts/sonic-invincibility-e275c1d3?lang=es-ES",
-          "type": "Potenciador"
+          "type": "Potenciador",
+          "color1": "#cb2036",
+          "color2": "#640015"
         },
         {
           "name": "Mad Moxxi",
@@ -2851,7 +3263,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/outfits/mad-moxxi-46252c96?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#b05700",
+          "color2": "#ab3a00",
+          "color3": "#731600"
         },
         {
           "name": "Omni-Man",
@@ -2863,7 +3278,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/outfits/omniman-c5b7631b?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         },
         {
           "name": "Lote de Bola 7",
@@ -2877,7 +3295,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/bundles/7ball-bundle-a766f1ec?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         },
         {
           "name": "Ritmazo",
@@ -2889,7 +3310,10 @@
           "isNew": false,
           "images": [],
           "url": "https://www.fortnite.com/item-shop/emotes/popular-vibe-700c19e7?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#004e66",
+          "color2": "#00253d",
+          "color3": "#000a2e"
         },
         {
           "name": "PUMA x SEGA RS-0 \"Sonic\"",
@@ -2905,7 +3329,9 @@
             "https://ucs-images.fortnite.com/blobs/5b/cb/495c-9b60-4297-a26c-f63bbc5eee51?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=e16c8c59e971f82a7ad8f18edd41fdaf6ae5845ee0c8f0321f34a34a25e9e451&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/kicks/puma-x-sega-rs0-sonic-63b2affe?lang=es-ES",
-          "type": "Calzado"
+          "type": "Calzado",
+          "color1": "#cb2036",
+          "color2": "#640015"
         },
         {
           "name": "PUMA x SEGA Inverse \"Shadow\"",
@@ -2921,7 +3347,9 @@
             "https://ucs-images.fortnite.com/blobs/f8/ac/8386-bd27-48dc-9acb-0601258d6851?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=58f4453747ae4ae5b7d2129790077ffa7bc78c5f033136e5f79b2def5186b7a0&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/kicks/puma-x-sega-inverse-shadow-e905bdb5?lang=es-ES",
-          "type": "Calzado"
+          "type": "Calzado",
+          "color1": "#cb2036",
+          "color2": "#640015"
         },
         {
           "name": "Aceleración giratoria",
@@ -2937,7 +3365,9 @@
             "https://ucs-images.fortnite.com/blobs/9e/98/ccd7-5b6a-4467-adfc-191662b79e9f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=d406441b1ab4e38182ad04b539fafe0a3c6f473dd6a8d3644b7a1a756db4f2ba&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/wheels/spin-dash-5eeaeb57?lang=es-ES",
-          "type": "Ruedas"
+          "type": "Ruedas",
+          "color1": "#cb2036",
+          "color2": "#640015"
         },
         {
           "name": "Propulsadoras",
@@ -2953,7 +3383,10 @@
             "https://ucs-images.fortnite.com/blobs/97/6d/4247-2296-4892-a75e-a0d6b6eb59a5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=5d1979594a82f67ff3fe2991a10291e19966e3e9032ced0734180db2c9753eaf&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/kicks/shuttle-stompers-a3aa5a54?lang=es-ES",
-          "type": "Calzado"
+          "type": "Calzado",
+          "color1": "#008b91",
+          "color2": "#004c66",
+          "color3": "#002452"
         }
       ]
     },
@@ -2974,7 +3407,9 @@
             "https://ucs-images.fortnite.com/blobs/7f/ad/638c-01f9-4e8e-ad26-249206bef108?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=5ee5a57d0c313ec19158e009109de68feb3ebca6d09ad6bf226b40d7058b2e35&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x200.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/recoil-av-bundle-a01ce277?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#BCD8E6",
+          "color2": "#085C89"
         },
         {
           "name": "Lote de Kendo ronin callejero",
@@ -2995,7 +3430,9 @@
             "https://ucs-images.fortnite.com/blobs/95/f4/4a47-ea04-47f0-9c30-939cbfea7a1e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=a318bc09da689b3a9b8978b8f4b7b24b35d7aab59c8f73bbb59275d106b856af&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/street-ronin-kendo-bundle-248935dd?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#BCD8E6",
+          "color2": "#085C89"
         },
         {
           "name": "Kendo ronin callejero",
@@ -3014,7 +3451,9 @@
             "https://ucs-images.fortnite.com/blobs/04/e9/005a-061b-4513-b814-615f3a113026?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=28e68366bc9d559e5ed3223133ddc1fa81267ca391b5e5185c53dd8ee2d052a1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/street-ronin-kendo-d82d4134?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#BCD8E6",
+          "color2": "#085C89"
         },
         {
           "name": "Bichobate",
@@ -3030,7 +3469,9 @@
             "https://ucs-images.fortnite.com/blobs/3f/64/02a0-342a-4cde-8d2c-3322b3d4b7c9?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=b00543b489c5d7874e2fec906c090fb42e57932803d957a039b31aac4fd85629&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/bug-basher-2afd6202?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#BCD8E6",
+          "color2": "#085C89"
         },
         {
           "name": "Práctica de bateo",
@@ -3046,7 +3487,9 @@
             "https://ucs-images.fortnite.com/blobs/9d/8e/f447-5137-40a4-8044-fced7250e65f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=001b63f8a98867933a58396a7d38fc587263c84183997ce90f8225e39481dbb4&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/batting-practice-a7af2c25?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#BCD8E6",
+          "color2": "#085C89"
         },
         {
           "name": "La vocación de Kendo",
@@ -3062,7 +3505,9 @@
             "https://ucs-images.fortnite.com/blobs/6d/0c/8d3f-e99c-4d60-b28d-4781a25568c8?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=0a943ddf1ca3d948b3ecc3ef096ea3d6e9580a129f24e97be9ffbfbd7cd2e157&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/wraps/kendos-calling-6c0b67cc?lang=es-ES",
-          "type": "Envoltorio"
+          "type": "Envoltorio",
+          "color1": "#BCD8E6",
+          "color2": "#085C89"
         },
         {
           "name": "Lote de Pez gatillo",
@@ -3089,7 +3534,9 @@
             "https://ucs-images.fortnite.com/blobs/fb/44/851a-d89d-49c8-97c6-1827af611709?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=177249d006c2ec8797775a8805493ca7e6256649a2dd4422c232881111ebdc33&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/triggerfish-bundle-bfafd2a1?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#BCD8E6",
+          "color2": "#085C89"
         },
         {
           "name": "Pez gatillo",
@@ -3114,7 +3561,9 @@
             "https://ucs-images.fortnite.com/blobs/20/b9/bfd6-5565-4cad-ae59-7fdf6d73f826?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=bcb3ce03b3cac38e5a1c9fa192b556dfb4b2a1fb5ced5b9c304737968376b047&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/triggerfish-b8b477be?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#BCD8E6",
+          "color2": "#085C89"
         },
         {
           "name": "Pescado fresco",
@@ -3130,7 +3579,9 @@
             "https://ucs-images.fortnite.com/blobs/a4/7f/2177-eb3a-4754-bbf8-77fe192f9562?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=f21b1ec68d3d8ca25420b2eec31631b43d2738c8a156729fdf7e64b6cbc5bf81&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/fresh-fish-70eb6983?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#BCD8E6",
+          "color2": "#085C89"
         },
         {
           "name": "Burbuflaje",
@@ -3146,7 +3597,9 @@
             "https://ucs-images.fortnite.com/blobs/d2/fa/b027-6697-4d57-80c1-f4b4f157c5d5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=6dd6493a485e2b81a337bd1976329049d961daaf7bb5c62444758fe7625f4e9d&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/wraps/bubbleflage-38400d6a?lang=es-ES",
-          "type": "Envoltorio"
+          "type": "Envoltorio",
+          "color1": "#BCD8E6",
+          "color2": "#085C89"
         }
       ]
     },
@@ -3172,7 +3625,9 @@
             "https://ucs-images.fortnite.com/blobs/5c/46/4f03-0ec3-46ba-9f5a-6a49f64a4ee7?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=d27064f9007961ff6e693f490d49e1afb1e3e68313ca27314d9287e946d3749b&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/feudal-gotham-bundle-01e28284?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#3a3a3c",
+          "color2": "#1f1f1f"
         },
         {
           "name": "Batman caballero ninja",
@@ -3191,7 +3646,9 @@
             "https://ucs-images.fortnite.com/blobs/7f/34/e0c3-5531-4ed2-bc17-cec2ee905a5c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=4550a894802547c073f9cecff37546cf2ff5187400645747a30a5e91726a9ec4&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/ninja-knight-batman-1a8bd85f?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#3a3a3c",
+          "color2": "#1f1f1f"
         },
         {
           "name": "Harley Quinn karuta",
@@ -3207,7 +3664,9 @@
             "https://ucs-images.fortnite.com/blobs/66/41/7fd3-e354-44b6-870f-cb8226cd4443?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=ab3f9e95f0c6fbe685befe4190f6ab77256a471c4c7fb564e65cb4c926e85e9f&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/karuta-harley-quinn-bdfccd7e?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#3a3a3c",
+          "color2": "#1f1f1f"
         },
         {
           "name": "Ōtsuchi de arlequín",
@@ -3223,7 +3682,9 @@
             "https://ucs-images.fortnite.com/blobs/9b/24/fde1-f00d-49a2-8db9-5491ceb47836?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=cdde46429d39a1176f8f59595442f4cf34a69a7bdc74311a08a0f1f8c37a64d3&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/harlequin-otsuchi-667f806d?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#3a3a3c",
+          "color2": "#1f1f1f"
         },
         {
           "name": "¡Bat-ninja se esfuma!",
@@ -3239,7 +3700,9 @@
             "https://ucs-images.fortnite.com/blobs/45/3c/76b9-aa5e-4322-96f2-1ab7dd7b116a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=528056f659a259d56c2ecec3b25fdf777923c226808855d433f8a8f16f44f391&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/ninja-bat-vanish-8b4e31ef?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#3a3a3c",
+          "color2": "#1f1f1f"
         },
         {
           "name": "Traje de Catwoman de los cómics",
@@ -3258,7 +3721,9 @@
             "https://ucs-images.fortnite.com/blobs/3e/39/5db4-384e-4ee2-8a60-c329db8917bf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=1acf7bcff28bee05e0a0ae72299f089f15a9ab3c756896e368f5973a285c6510&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/catwoman-comic-book-outfit-b964332b?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#3a3a3c",
+          "color2": "#1f1f1f"
         },
         {
           "name": "Garras de gata",
@@ -3274,7 +3739,9 @@
             "https://ucs-images.fortnite.com/blobs/fa/d1/d74a-0ab4-4d28-9ebc-7b3c8928a531?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=7237b99c72e68e9b0efff733d2e8a57c08077368f829ee813c323afa6c765f54&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/cats-claws-eae64c7a?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#3a3a3c",
+          "color2": "#1f1f1f"
         },
         {
           "name": "Lote de Batmobile (1989)",
@@ -3290,7 +3757,9 @@
             "https://ucs-images.fortnite.com/blobs/ed/22/4475-5889-4c5a-b9a9-67ec3564bb05?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=df6bffbcf43670896aa88dcfdb08169fbd190d7ae1bda60cab09869c167cfc9f&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x200.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/batmobile-1989-bundle-a0f933c7?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#3a3a3c",
+          "color2": "#1f1f1f"
         }
       ]
     },
@@ -3311,7 +3780,10 @@
             "https://ucs-images.fortnite.com/blobs/f8/70/efcd-7bc5-4b2a-86de-9941ced0e1a2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=4dfcc8f8a00d4973b28890a881e798d8f2cefe8ef747164c89b8fe6a43cd2d2e&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/peligrosa-85cd4beb?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#47fdfe",
+          "color2": "#2B6FA1",
+          "color3": "#011F22"
         },
         {
           "name": "two",
@@ -3327,7 +3799,10 @@
             "https://ucs-images.fortnite.com/blobs/e2/6d/ea55-8284-4fbe-bfbc-9a51903fece5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=7d6f84015161a1ac2581603201bd43effb8804d03f2d16bf3b34d8c6cb1fcea4&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/two-d57fb8ba?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#47fdfe",
+          "color2": "#2B6FA1",
+          "color3": "#011F22"
         },
         {
           "name": "¡Bim, bam, bum!",
@@ -3343,7 +3818,10 @@
             "https://ucs-images.fortnite.com/blobs/60/c2/89dc-a64e-42e5-ba9e-e6810193aa9b?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=ac4a5b4e1e927160867f918a0f784a00f206dba72aa895d150bdfd3c654a33e3&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/bim-bam-boom-67ec2600?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#47fdfe",
+          "color2": "#2B6FA1",
+          "color3": "#011F22"
         },
         {
           "name": "Triunfante",
@@ -3359,7 +3837,10 @@
             "https://ucs-images.fortnite.com/blobs/49/93/971f-a2b9-4df9-be20-fb3d9ab05f6e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=ffcd407452ab0928ac667223669cdc7027196d9ba7b83317f32f2ed5f1102e2c&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/triumphant-f7240484?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#47fdfe",
+          "color2": "#2B6FA1",
+          "color3": "#011F22"
         },
         {
           "name": "Pasito Lo-Fi",
@@ -3375,7 +3856,10 @@
             "https://ucs-images.fortnite.com/blobs/2e/0b/b6bd-90d4-4f4f-bf74-093826fb7ed5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=fbd622a5b870039ace097c0a3e4f509ee49d90a4c971e78457b5063f2d9b655b&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/lofi-headbang-bda2ca67?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#47fdfe",
+          "color2": "#2B6FA1",
+          "color3": "#011F22"
         },
         {
           "name": "Destrozarritmos",
@@ -3391,7 +3875,10 @@
             "https://ucs-images.fortnite.com/blobs/32/d8/a2c8-3438-4dad-a57a-b7595da55541?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=8cd02564230a8b9ac404d6fa063d1999c3b93ca2348fcef2cd490444913bdf40&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/groove-destroyer-d2f3f6cf?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#47fdfe",
+          "color2": "#2B6FA1",
+          "color3": "#011F22"
         },
         {
           "name": "Mr. Brightside",
@@ -3407,7 +3894,10 @@
             "https://ucs-images.fortnite.com/blobs/0e/81/5fbc-066b-4e82-87e7-fd14865c6113?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=d66e79f832069b681cdedb47e453aa6c5d02f2ffa1940f27b6c6b0443df273af&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/mr-brightside-3db88a08?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#47fdfe",
+          "color2": "#2B6FA1",
+          "color3": "#011F22"
         },
         {
           "name": "CrazyBoy",
@@ -3423,7 +3913,10 @@
             "https://ucs-images.fortnite.com/blobs/f0/64/8957-3713-401f-ad96-474a4eeef3c2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=97f4decc826f98be6ae9ef8b351257929de8bf72cf0c32971003dff0e2fb71fb&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/crazyboy-764e670a?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#47fdfe",
+          "color2": "#2B6FA1",
+          "color3": "#011F22"
         }
       ]
     },
@@ -3449,7 +3942,10 @@
             "https://ucs-images.fortnite.com/blobs/4f/36/9bd0-b374-4cc2-8070-e1c9d32b1ef0?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=dd090118785cc3de15b03d94b4bae1164ddcd3956168d5712983239c3b4a752d&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/mad-moxxi-bundle-3b0b07f8?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#b05700",
+          "color2": "#ab3a00",
+          "color3": "#731600"
         },
         {
           "name": "Megáfono del Underdome",
@@ -3465,7 +3961,10 @@
             "https://ucs-images.fortnite.com/blobs/ae/ce/63a0-c653-4bcf-8603-33c671977f3f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=d0fac59ad70e56e930f486fb6a3e817ae6b60760bf9aa10a4967b414de7f0094&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/underdome-megaphone-32a43120?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#b05700",
+          "color2": "#ab3a00",
+          "color3": "#731600"
         },
         {
           "name": "Tarro de propinas de Moxxi",
@@ -3481,7 +3980,10 @@
             "https://ucs-images.fortnite.com/blobs/0b/08/2f77-1d3e-4817-8738-9f3fa7da2092?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=0a1d5839134c422fd315e5329f8497f39a291ea65d2d892a2093f182750ff88b&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/back-bling/moxxis-tip-jar-7be5f851?lang=es-ES",
-          "type": "Accesorio mochilero"
+          "type": "Accesorio mochilero",
+          "color1": "#b05700",
+          "color2": "#ab3a00",
+          "color3": "#731600"
         },
         {
           "name": "Torgue",
@@ -3497,7 +3999,10 @@
             "https://ucs-images.fortnite.com/blobs/18/4d/5798-2239-4f00-92a5-b2b5934465f8?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=94782fc5ef71f6b5333eb0e67c03e87f7ef6ed7a0be9efd461c56e4d08df142d&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/wraps/torgue-15c5efb6?lang=es-ES",
-          "type": "Envoltorio"
+          "type": "Envoltorio",
+          "color1": "#b05700",
+          "color2": "#ab3a00",
+          "color3": "#731600"
         },
         {
           "name": "Maliwan",
@@ -3513,7 +4018,10 @@
             "https://ucs-images.fortnite.com/blobs/37/29/67fb-f751-44d9-85e0-594eb6b0a057?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=a0b483b7194b9db482f9fc1f6e7108f2608dbde7b70b0897825da983fcd6cc1f&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/wraps/maliwan-412e0501?lang=es-ES",
-          "type": "Envoltorio"
+          "type": "Envoltorio",
+          "color1": "#b05700",
+          "color2": "#ab3a00",
+          "color3": "#731600"
         },
         {
           "name": "Jakobs",
@@ -3529,7 +4037,10 @@
             "https://ucs-images.fortnite.com/blobs/70/4b/2c8d-dfb8-47d5-9378-f7efc1c7d8cb?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150554Z&X-Amz-Expires=90000&X-Amz-Signature=0edcc7bb7082b57015802f3bde9867a48308b5f957257ddb36e3a5358c5d8901&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/wraps/jakobs-dfafa4a7?lang=es-ES",
-          "type": "Envoltorio"
+          "type": "Envoltorio",
+          "color1": "#b05700",
+          "color2": "#ab3a00",
+          "color3": "#731600"
         },
         {
           "name": "Dedicatoria de Moxxi",
@@ -3545,7 +4056,10 @@
             "https://ucs-images.fortnite.com/blobs/60/28/d3ed-3317-4ead-8065-462703fb2b29?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=86e034ad75af3398f7900237a06d23d6df0614826e153e8e4c764f1be76f86ca&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/moxxis-lip-service-de4e4729?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#b05700",
+          "color2": "#ab3a00",
+          "color3": "#731600"
         }
       ]
     },
@@ -3568,7 +4082,10 @@
             "https://ucs-images.fortnite.com/blobs/9a/0a/d521-8ed4-4d5e-88e6-6f40aa48c639?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=5174f74d2daea3ff9cb4261cfb6045f53a4c07f58dad6db76f9e7a4898523622&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/nanasss-locker-bundle-c154af35?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#F8C387",
+          "color2": "#EF7C72",
+          "color3": "#D05FB8"
         },
         {
           "name": "Mika",
@@ -3584,7 +4101,10 @@
             "https://ucs-images.fortnite.com/blobs/f8/dc/61b4-72d3-4755-b3af-6fb1260119cd?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=34c4865bb2641ccfd70bc031b389cb891b9f061e2714df1e7bef20342721acd8&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/mika-402de4e4?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#F8C387",
+          "color2": "#EF7C72",
+          "color3": "#D05FB8"
         },
         {
           "name": "Bombardeo",
@@ -3600,7 +4120,10 @@
             "https://ucs-images.fortnite.com/blobs/bf/8f/47f7-22ad-4cc0-b0b7-035b53fa4f7d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=411600ef60d07e7591f344aff47beba1806d5bbaaeb9fca99f1137469cf9b8a5&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/emotes/bombastic-69c5ee8e?lang=es-ES",
-          "type": "Gesto"
+          "type": "Gesto",
+          "color1": "#F8C387",
+          "color2": "#EF7C72",
+          "color3": "#D05FB8"
         },
         {
           "name": "Ataque nuboso",
@@ -3616,7 +4139,10 @@
             "https://ucs-images.fortnite.com/blobs/ce/ec/bbb8-27bd-417d-a560-9124d7ea60da?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=f115a0b03e12304d776f2d1bfb1b6207bbbe2e32ae3cf2bafb4454471a17d039&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/gliders/cloud-strike-c8e60a1e?lang=es-ES",
-          "type": "Ala delta"
+          "type": "Ala delta",
+          "color1": "#F8C387",
+          "color2": "#EF7C72",
+          "color3": "#D05FB8"
         },
         {
           "name": "Pesadilla llama",
@@ -3632,7 +4158,10 @@
             "https://ucs-images.fortnite.com/blobs/84/d8/b052-9591-41e6-9f70-12bb660080ff?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=22cdcda7592b64d3aee151084873ad1be3d8463648c506001d4124a6ca61a4eb&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/llamas-bane-53f1d53a?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#F8C387",
+          "color2": "#EF7C72",
+          "color3": "#D05FB8"
         }
       ]
     },
@@ -3667,7 +4196,10 @@
             "https://ucs-images.fortnite.com/blobs/82/7f/642f-0d8c-47f8-98bb-741a83cd18a9?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=294f6340d7bd913c5d343655208c92bb6ca8fce26e2ae250f3c0db7905305e3d&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/the-weeknd-bundle-272235ac?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#004e66",
+          "color2": "#00253d",
+          "color3": "#000a2e"
         },
         {
           "name": "Weeknd táctico",
@@ -3695,7 +4227,10 @@
             "https://ucs-images.fortnite.com/blobs/ff/46/170a-f074-460d-874f-58503db07c03?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=74cd5abee3a92c5e3d2409049934bbc4a08d892823ca767bd8c086c83467b57e&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/outfits/the-weeknd-combat-a7c08f90?lang=es-ES",
-          "type": "Traje (estilo de Fortnite)"
+          "type": "Traje (estilo de Fortnite)",
+          "color1": "#004e66",
+          "color2": "#00253d",
+          "color3": "#000a2e"
         },
         {
           "name": "Hacha XO",
@@ -3711,7 +4246,10 @@
             "https://ucs-images.fortnite.com/blobs/58/db/9e15-fe22-4d9d-ab38-bbac0e0da2a3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=a7ff22964cc21592e0668388df797a3bc923bdb18e62422515c68c22da9d40c6&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/pickaxes/axeo-f28fbce6?lang=es-ES",
-          "type": "Pico"
+          "type": "Pico",
+          "color1": "#004e66",
+          "color2": "#00253d",
+          "color3": "#000a2e"
         },
         {
           "name": "Guitarra XO",
@@ -3727,7 +4265,10 @@
             "https://ucs-images.fortnite.com/blobs/37/00/a78c-1b36-4c01-9ba8-0f92850a39e2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=507190fce23917ee1e3ee6ed38b41beb4d76006908f230405ac9d57a032a9883&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/guitars/xo-6string-2b4d2d16?lang=es-ES",
-          "type": "Guitarra"
+          "type": "Guitarra",
+          "color1": "#004e66",
+          "color2": "#00253d",
+          "color3": "#000a2e"
         },
         {
           "name": "Teclado XO",
@@ -3743,7 +4284,10 @@
             "https://ucs-images.fortnite.com/blobs/15/63/3954-6d82-48fa-91e8-73df7cd7b91f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=1d199f48c4be6bdc108ecc5c3008efe952760a5e7bb9d4cafd29efc7c6a27003&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/keytars/xo-keys-0326a8a6?lang=es-ES",
-          "type": "Keytar"
+          "type": "Keytar",
+          "color1": "#004e66",
+          "color2": "#00253d",
+          "color3": "#000a2e"
         }
       ]
     },
@@ -3767,7 +4311,9 @@
             "https://ucs-images.fortnite.com/blobs/bf/f3/efd1-8dad-4c14-a32c-9b4b09e762d5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=77d25d0924cbd4ab05b9fff3b6e8067e3dab0ebaeb1973cffbb2b4ea87645c3b&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/kicks/nike-air-max-95-yugioh-jounichi-7f2de3c9?lang=es-ES",
-          "type": "Calzado"
+          "type": "Calzado",
+          "color1": "#9D99BD",
+          "color2": "#63559D"
         },
         {
           "name": "Nike SB Dunk Low \"Khaki/Baroque Brown\"",
@@ -3783,7 +4329,9 @@
             "https://ucs-images.fortnite.com/blobs/6c/af/a0b0-3abc-4ad0-b367-40d7bea2bf67?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=f8cbef2f94900f2632a6549a3c09f0e7aac08ec7ef94b9ec61867792dea986ce&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/kicks/nike-sb-dunk-low-khakibaroque-brown-666e41e5?lang=es-ES",
-          "type": "Calzado"
+          "type": "Calzado",
+          "color1": "#9D99BD",
+          "color2": "#63559D"
         },
         {
           "name": "Air Jordan 3 Retro \"Seoul\"",
@@ -3799,7 +4347,9 @@
             "https://ucs-images.fortnite.com/blobs/3e/60/95b7-cd4c-4ac2-92f7-ca7235b4466c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=16ea0b0067222f2a8869f8679a565486f1caf273c1146197f26353f194682366&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/kicks/air-jordan-3-retro-seoul-e73a08ef?lang=es-ES",
-          "type": "Calzado"
+          "type": "Calzado",
+          "color1": "#9D99BD",
+          "color2": "#63559D"
         },
         {
           "name": "Nike Air Max 95 OG \"Neon\"",
@@ -3815,7 +4365,9 @@
             "https://ucs-images.fortnite.com/blobs/59/22/2367-94d7-48c6-8fe8-24017bfd0ad5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=80981a5cea0bc2a96d3adf80e21f5b223bcd968001c60252bfbe339f3a80b66c&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/kicks/nike-air-max-95-og-neon-8ea30e0c?lang=es-ES",
-          "type": "Calzado"
+          "type": "Calzado",
+          "color1": "#9D99BD",
+          "color2": "#63559D"
         }
       ]
     },
@@ -3836,7 +4388,10 @@
             "https://ucs-images.fortnite.com/blobs/4d/7a/827e-ef23-47eb-a3b5-3f0d2bd6bdda?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=da4639955034e23627242ae2c826b36a229d5d0d0e95c0ca6da445bf7c481378&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/wheels/deep-tread-8b849f99?lang=es-ES",
-          "type": "Ruedas"
+          "type": "Ruedas",
+          "color1": "#4551D1",
+          "color2": "#6E48D4",
+          "color3": "#9A3DD8"
         },
         {
           "name": "Llamarada",
@@ -3852,7 +4407,10 @@
             "https://ucs-images.fortnite.com/blobs/c0/ca/a792-5937-4377-b2a8-a12d232a3ec1?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=6b0cb96a5756aa24e44d051d1f7a740b659387020151e7b3a83f172b969ee5e8&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/trails/blazer-cb0e40ce?lang=es-ES",
-          "type": "Rastro"
+          "type": "Rastro",
+          "color1": "#4551D1",
+          "color2": "#6E48D4",
+          "color3": "#9A3DD8"
         },
         {
           "name": "Llama oscura",
@@ -3868,7 +4426,10 @@
             "https://ucs-images.fortnite.com/blobs/6a/70/942e-7c81-4f07-bc82-3689ee770377?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=5b92d4db0d3ca3df036f3bfd9a2da75f9806bf4d0ce13aefb2c30ed9433c702e&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-256x256.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/boosts/dark-fire-c46a11d0?lang=es-ES",
-          "type": "Potenciador"
+          "type": "Potenciador",
+          "color1": "#4551D1",
+          "color2": "#6E48D4",
+          "color3": "#9A3DD8"
         }
       ]
     },
@@ -3889,7 +4450,9 @@
             "https://ucs-images.fortnite.com/blobs/41/42/7e1e-7d9e-407a-8f8e-0d23c27cf8fc?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=aabd608fb40d0f4f6f87c19b894838c23cbddb12c15102b621a28def852837cd&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/diesel-bundle-dd31553b?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#69BBFF",
+          "color2": "#000000"
         }
       ]
     },
@@ -3910,7 +4473,10 @@
             "https://ucs-images.fortnite.com/blobs/bf/f2/f6d3-bca6-44f6-9cc5-796ad1e35d46?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2SBBZFECCYQWRK6G%2F20250924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250924T150553Z&X-Amz-Expires=90000&X-Amz-Signature=e3c255d8288a9c495da3560950ea36c382eac009261aa3fb5faf0ff4451a46b3&X-Amz-SignedHeaders=host&response-content-disposition=inline%3Bfilename%3D%22file.png%22%3Bfilename%2A%3DUTF-8%27%27input-sm.png&x-id=GetObject"
           ],
           "url": "https://www.fortnite.com/item-shop/bundles/megastar-bundle-8de190d0?lang=es-ES",
-          "type": "Lote"
+          "type": "Lote",
+          "color1": "#4BBFBF",
+          "color2": "#2AB2B5",
+          "color3": "#096D73"
         }
       ]
     }

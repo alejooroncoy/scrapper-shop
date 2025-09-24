@@ -110,7 +110,7 @@ async function ejecutarScraper(): Promise<void> {
 }
 
 // Función para extraer colores de los productos
-async function ejecutarExtraccionColores(): Promise<void> {
+export async function ejecutarExtraccionColores(): Promise<void> {
   try {
     const puppeteer = await import('puppeteer');
     const fs = await import('fs');
@@ -647,7 +647,10 @@ app.get('/api', (req, res) => {
         isNew: 'Si es producto nuevo',
         images: 'Array de URLs de imágenes',
         url: 'URL del producto',
-        type: 'Tipo de producto'
+        type: 'Tipo de producto',
+        color1: 'Color principal del producto',
+        color2: 'Color secundario del producto',
+        color3: 'Color terciario del producto'
       }
     },
     rateLimits: {
