@@ -149,7 +149,9 @@ async function ejecutarExtraccionColores(): Promise<void> {
         '--disable-ipc-flooding-protection',
         // Proxy args
         `--proxy-server=${proxyConfig.server}`
-      ]
+      ],
+      timeout: 120000,
+      protocolTimeout: 120000
     });
     
     try {
@@ -165,6 +167,10 @@ async function ejecutarExtraccionColores(): Promise<void> {
       console.log(`🆔 Sesión: ${proxyConfig.password.split('_session-')[1]?.split('_lifetime')[0] || 'N/A'}`);
       
       // Configurar user agent y headers
+      // Configurar timeouts de página
+      page.setDefaultTimeout(120000);
+      page.setDefaultNavigationTimeout(120000);
+      
       await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
       
       // Configurar headers adicionales para parecer más humano
@@ -213,29 +219,68 @@ async function ejecutarExtraccionColores(): Promise<void> {
       await page.setCookie(...FORTNITE_COOKIES);
       
       console.log('🌐 Navegando a la página para extraer colores...');
-      await page.goto('https://www.fortnite.com/item-shop', { 
-        waitUntil: 'domcontentloaded',
-        timeout: 60000 
-      });
+      try {
+        await page.goto('https://www.fortnite.com/item-shop', { 
+          waitUntil: 'networkidle2',
+          timeout: 120000 
+        });
+      } catch (error) {
+        console.log('⚠️ Error en navegación inicial, intentando con domcontentloaded...');
+        await page.goto('https://www.fortnite.com/item-shop', { 
+          waitUntil: 'domcontentloaded',
+          timeout: 120000 
+        });
+      }
       
       // Esperar a que se cargue el contenido con delay aleatorio
       console.log('⏳ Esperando a que se cargue el contenido...');
       const randomDelay = Math.floor(Math.random() * 3000) + 3000; // 3-6 segundos
       await new Promise(resolve => setTimeout(resolve, randomDelay));
       
-      // Simular comportamiento humano - mover mouse
-      await page.mouse.move(100, 100);
+      // Simular comportamiento humano - scroll en lugar de mouse
+      await page.evaluate(() => {
+        (globalThis as any).scrollTo({ top: 100, behavior: 'smooth' });
+      });
       await new Promise(resolve => setTimeout(resolve, 1000));
-      await page.mouse.move(200, 200);
+      await page.evaluate(() => {
+        (globalThis as any).scrollTo({ top: 300, behavior: 'smooth' });
+      });
       await new Promise(resolve => setTimeout(resolve, 500));
       
       console.log('🔍 Extrayendo window.__remixContext...');
-      const remixContext = await page.evaluate(() => {
-        return (globalThis as any).__remixContext;
-      });
+      let remixContext: any = null;
+      let intentosRemix = 0;
+      const maxIntentosRemix = 3;
+      
+      while (!remixContext && intentosRemix < maxIntentosRemix) {
+        try {
+          remixContext = await page.evaluate(() => {
+            return (globalThis as any).__remixContext;
+          });
+          
+          if (!remixContext) {
+            intentosRemix++;
+            if (intentosRemix < maxIntentosRemix) {
+              console.log(`⚠️ window.__remixContext no encontrado, intento ${intentosRemix}/${maxIntentosRemix}`);
+              await new Promise(resolve => setTimeout(resolve, 2000));
+              // Intentar hacer scroll para activar lazy loading
+              await page.evaluate(() => {
+                (globalThis as any).scrollTo(0, (globalThis as any).document.body.scrollHeight);
+              });
+              await new Promise(resolve => setTimeout(resolve, 1000));
+            }
+          }
+        } catch (error) {
+          console.log(`⚠️ Error extrayendo remixContext, intento ${intentosRemix + 1}/${maxIntentosRemix}`, error);
+          intentosRemix++;
+          if (intentosRemix < maxIntentosRemix) {
+            await new Promise(resolve => setTimeout(resolve, 2000));
+          }
+        }
+      }
       
       if (!remixContext) {
-        throw new Error('No se encontró window.__remixContext');
+        throw new Error('No se encontró window.__remixContext después de todos los intentos');
       }
       
       console.log('✅ window.__remixContext encontrado');

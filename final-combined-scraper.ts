@@ -157,9 +157,9 @@ class FinalCombinedScraper {
   
   constructor(config?: Partial<ScrapingConfig>) {
     this.config = {
-      timeout: 60000,
-      retryAttempts: 3,
-      delayBetweenRequests: 2000,
+      timeout: 120000, // Aumentado a 2 minutos
+      retryAttempts: 5, // Aumentado a 5 intentos
+      delayBetweenRequests: 3000, // Aumentado a 3 segundos
       useProxy: false,
       headless: true,
       logLevel: 'info',
@@ -321,10 +321,26 @@ class FinalCombinedScraper {
           '--enable-automation',
           '--password-store=basic',
           '--use-mock-keychain',
+          '--disable-background-timer-throttling',
+          '--disable-renderer-backgrounding',
+          '--disable-backgrounding-occluded-windows',
+          '--disable-features=TranslateUI',
+          '--disable-ipc-flooding-protection',
+          '--disable-background-networking',
+          '--disable-default-apps',
+          '--disable-sync',
+          '--metrics-recording-only',
+          '--no-first-run',
+          '--safebrowsing-disable-auto-update',
+          '--enable-automation',
+          '--password-store=basic',
+          '--use-mock-keychain',
           // Proxy args
           ...(proxyConfig ? [`--proxy-server=${proxyConfig.server}`] : [])
         ],
-        timeout: this.config.timeout
+        timeout: this.config.timeout,
+        protocolTimeout: this.config.timeout,
+        ignoreDefaultArgs: ['--disable-extensions']
       });
       
       logger.debug('Navegador iniciado correctamente');
@@ -404,12 +420,20 @@ class FinalCombinedScraper {
       logger.info('Navegando a la página...');
       
       // Navegar a la página con mejor manejo de errores
-      await page.goto(url, { 
-        waitUntil: 'domcontentloaded',
-        timeout: this.config.timeout 
-      });
-      
-      logger.debug('Página cargada correctamente');
+      try {
+        await page.goto(url, { 
+          waitUntil: 'networkidle2',
+          timeout: this.config.timeout 
+        });
+        logger.debug('Página cargada correctamente');
+      } catch (error) {
+        logger.warn('Error en navegación inicial, intentando con domcontentloaded...');
+        await page.goto(url, { 
+          waitUntil: 'domcontentloaded',
+          timeout: this.config.timeout 
+        });
+        logger.debug('Página cargada con domcontentloaded');
+      }
 
 
       // Esperar a que se cargue el contenido con delay aleatorio
@@ -428,11 +452,38 @@ class FinalCombinedScraper {
         logger.warn('Selector de productos no encontrado, continuando...');
       }
 
-      // Extraer window.__remixContext para obtener offerIds
+      // Extraer window.__remixContext para obtener offerIds con reintentos
       logger.info('Extrayendo window.__remixContext...');
-      const remixContext = await page.evaluate(() => {
-        return (globalThis as any).__remixContext;
-      });
+      let remixContext: any = null;
+      let intentosRemix = 0;
+      const maxIntentosRemix = 3;
+      
+      while (!remixContext && intentosRemix < maxIntentosRemix) {
+        try {
+          remixContext = await page.evaluate(() => {
+            return (globalThis as any).__remixContext;
+          });
+          
+          if (!remixContext) {
+            intentosRemix++;
+            if (intentosRemix < maxIntentosRemix) {
+              logger.warn(`window.__remixContext no encontrado, intento ${intentosRemix}/${maxIntentosRemix}`);
+              await this.delay(2000);
+              // Intentar hacer scroll para activar lazy loading
+              await page.evaluate(() => {
+                (globalThis as any).scrollTo(0, (globalThis as any).document.body.scrollHeight);
+              });
+              await this.delay(1000);
+            }
+          }
+        } catch (error) {
+          logger.warn(`Error extrayendo remixContext, intento ${intentosRemix + 1}/${maxIntentosRemix}`, error);
+          intentosRemix++;
+          if (intentosRemix < maxIntentosRemix) {
+            await this.delay(2000);
+          }
+        }
+      }
 
       let offerIdGeneral = 'No encontrado';
       let productosConOfferId: any[] = [];
@@ -446,7 +497,7 @@ class FinalCombinedScraper {
           productosConOfferId: productosConOfferId.length
         });
       } else {
-        logger.warn('No se encontró window.__remixContext');
+        logger.warn('No se encontró window.__remixContext después de todos los intentos');
       }
 
       // Obtener el HTML para extraer productos
@@ -480,19 +531,25 @@ class FinalCombinedScraper {
 
   private async simularComportamientoHumano(page: Page): Promise<void> {
     try {
-      // Mover mouse de forma natural
-      await page.mouse.move(100, 100);
-      await this.delay(1000);
-      await page.mouse.move(200, 200);
-      await this.delay(500);
-      
-      // Simular scroll suave
+      // Simular scroll suave en lugar de mover mouse
       await page.evaluate(() => {
         (globalThis as any).scrollTo({ top: 100, behavior: 'smooth' });
       });
       await this.delay(1000);
       
-      logger.debug('Comportamiento humano simulado');
+      // Simular más scroll
+      await page.evaluate(() => {
+        (globalThis as any).scrollTo({ top: 300, behavior: 'smooth' });
+      });
+      await this.delay(500);
+      
+      // Simular scroll hacia abajo
+      await page.evaluate(() => {
+        (globalThis as any).scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      await this.delay(1000);
+      
+      logger.debug('Comportamiento humano simulado (scroll)');
     } catch (error) {
       logger.warn('Error simulando comportamiento humano', error);
     }

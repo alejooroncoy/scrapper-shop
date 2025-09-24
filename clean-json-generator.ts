@@ -36,8 +36,19 @@ class CleanJsonGenerator {
     try {
       console.log('🧹 Generando JSON limpio...');
       
-      // Leer el archivo final
-      const data = JSON.parse(fs.readFileSync('fortnite_shop_final.json', 'utf8'));
+      // Leer el archivo final (prioridad: latest, luego final)
+      let data: any;
+      try {
+        data = JSON.parse(fs.readFileSync('fortnite_shop_latest.json', 'utf8'));
+        console.log('📁 Usando fortnite_shop_latest.json');
+      } catch (error) {
+        try {
+          data = JSON.parse(fs.readFileSync('fortnite_shop_final.json', 'utf8'));
+          console.log('📁 Usando fortnite_shop_final.json');
+        } catch (error2) {
+          throw new Error('No se encontró fortnite_shop_latest.json ni fortnite_shop_final.json');
+        }
+      }
       
       const categoriasLimpias: Categoria[] = [];
       
