@@ -677,10 +677,10 @@ app.use((error: any, req: express.Request, res: express.Response, next: express.
   });
 });
 
-// Configurar cron job para actualización automática a las 7 PM (hora Perú)
-// Perú está en UTC-5, así que 7 PM Perú = 12 AM UTC (medianoche)
-cron.schedule('0 0 * * *', async () => {
-  console.log('⏰ Ejecutando actualización automática programada...');
+// Configurar cron job para actualización automática cada 3 horas (hora Perú)
+// Se ejecuta a las 00:00, 03:00, 06:00, 09:00, 12:00, 15:00, 18:00, 21:00 (hora Perú)
+cron.schedule('0 */3 * * *', async () => {
+  console.log('⏰ Ejecutando actualización automática programada (cada 3 horas)...');
   await ejecutarScraper();
 }, {
   timezone: 'America/Lima'
@@ -699,7 +699,7 @@ async function iniciarServidor() {
       console.log(`🌐 URL: http://localhost:${PORT}`);
       console.log(`📚 Documentación: http://localhost:${PORT}/api`);
       console.log(`💚 Salud: http://localhost:${PORT}/api/health`);
-      console.log('⏰ Actualización automática: Todos los días a las 7:00 PM (hora Perú) con proxy aleatorio');
+      console.log('⏰ Actualización automática: Cada 3 horas (00:00, 03:00, 06:00, 09:00, 12:00, 15:00, 18:00, 21:00) hora Perú con proxy aleatorio');
       console.log('🛡️  Rate limiting activado para prevenir DDoS');
     });
   } catch (error) {
