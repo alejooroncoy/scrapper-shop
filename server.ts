@@ -88,7 +88,7 @@ async function ejecutarScraper(): Promise<void> {
     
     // Ejecutar el scraper final con proxy aleatorio (por defecto)
     console.log('📦 Ejecutando scraper final con proxy aleatorio...');
-    await execAsync('bun run final-combined-scraper.ts');
+    await execAsync('bun run final-combined-scraper.ts --proxy-random');
     
     // Generar JSON limpio
     console.log('🧹 Generando JSON limpio...');
