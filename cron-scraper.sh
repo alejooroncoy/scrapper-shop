@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Script para ejecutar el scraper de Fortnite con cron
-# Este script se ejecutará automáticamente cada día
+# Script para ejecutar el scraper de Fortnite con cron y proxy
+# Este script se ejecutará automáticamente cada día usando proxy aleatorio
 
 # Configurar variables
 PROJECT_DIR="/Users/USER/Desktop/Projects/freelancer/web-scrapping"
@@ -21,12 +21,16 @@ echo "📁 Directorio: $PROJECT_DIR" >> "$LOG_FILE"
 echo "📝 Log: $LOG_FILE" >> "$LOG_FILE"
 echo "===========================================" >> "$LOG_FILE"
 
-# Ejecutar el scraper (usa proxy aleatorio por defecto)
-bun run final-combined-scraper.ts >> "$LOG_FILE" 2>&1
+# Ejecutar el scraper con proxy aleatorio
+echo "🌐 Configurando proxy aleatorio..." >> "$LOG_FILE"
+echo "🔧 Comando: bun run final-combined-scraper.ts --proxy-random" >> "$LOG_FILE"
+echo "⏰ Iniciando scraping con proxy..." >> "$LOG_FILE"
+bun run final-combined-scraper.ts --proxy-random >> "$LOG_FILE" 2>&1
 
 # Verificar si el scraping fue exitoso
 if [ $? -eq 0 ]; then
     echo "✅ Scraping completado exitosamente - $(date)" >> "$LOG_FILE"
+    echo "🌐 Proxy utilizado: Aleatorio (rotación automática)" >> "$LOG_FILE"
     
     # Generar JSON limpio
     echo "🧹 Generando JSON limpio..." >> "$LOG_FILE"
@@ -53,9 +57,10 @@ if [ $? -eq 0 ]; then
     # echo "Fortnite scraper completado exitosamente" | mail -s "Scraper Success" tu-email@ejemplo.com
 else
     echo "❌ Error en el scraping - $(date)" >> "$LOG_FILE"
+    echo "🌐 Proxy utilizado: Aleatorio (puede haber fallado)" >> "$LOG_FILE"
     
     # Enviar notificación de error (opcional)
-    # echo "Error en el scraper de Fortnite" | mail -s "Scraper Error" tu-email@ejemplo.com
+    # echo "Error en el scraper de Fortnite con proxy" | mail -s "Scraper Error" tu-email@ejemplo.com
 fi
 
 echo "===========================================" >> "$LOG_FILE"
