@@ -677,11 +677,36 @@ app.use((error: any, req: express.Request, res: express.Response, next: express.
   });
 });
 
+// Función para hacer petición a la API internamente
+async function actualizarViaAPI(): Promise<void> {
+  try {
+    console.log('🔄 Cron job: Solicitando actualización via API interna...');
+    
+    // Simular petición POST a la API internamente
+    const response = await fetch(`http://localhost:${PORT}/api/fortnite-shop/update`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    
+    if (response.ok) {
+      const result = await response.json() as { lastUpdate?: string };
+      console.log('✅ Cron job: Actualización via API completada exitosamente');
+      console.log(`📅 Última actualización: ${result.lastUpdate || 'No disponible'}`);
+    } else {
+      console.error('❌ Cron job: Error en la petición a la API:', response.status);
+    }
+  } catch (error) {
+    console.error('❌ Cron job: Error al actualizar via API:', error);
+  }
+}
+
 // Configurar cron job para actualización automática cada 3 horas (hora Perú)
 // Se ejecuta a las 00:00, 03:00, 06:00, 09:00, 12:00, 15:00, 18:00, 21:00 (hora Perú)
 cron.schedule('0 */3 * * *', async () => {
   console.log('⏰ Ejecutando actualización automática programada (cada 3 horas)...');
-  await ejecutarScraper();
+  await actualizarViaAPI();
 }, {
   timezone: 'America/Lima'
 });
